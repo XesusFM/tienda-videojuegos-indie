@@ -20,7 +20,55 @@
             "imagen": "/hollow-knight.jpg",
             "precio": 14.99,
             "descripcion": "Un metroidvania desafiante y bonito.",
-            "categoria": "Metroidvania"
+            "categoria": "Metroidvania",
+            "descuento": 20
+        },
+        {
+            "id": 2,
+            "titulo": "Ori and the Blind Forest",
+            "imagen": "/ori-blind-forest.jpg",
+            "precio": 19.99,
+            "descripcion": "Un metroidvania visualmente impresionante con una historia emotiva.",
+            "categoria": "Metroidvania",
+            "descuento": 15
+        },
+        {
+            "id": 3,
+            "titulo": "Salt and Sanctuary",
+            "imagen": "/salt-sanctuary.jpg",
+            "precio": 17.99,
+            "descripcion": "Un desafiante juego de acción en 2D con mecánicas estilo 'souls'.",
+            "categoria": "Acción/RPG",
+            "descuento": 10
+        },
+        {
+            "id": 4,
+            "titulo": "Axiom Verge",
+            "imagen": "/axiom-verge.jpg",
+            "precio": 14.99,
+            "descripcion": "Un metroidvania de ciencia ficción inspirado en los clásicos de 16 bits.",
+            "categoria": "Metroidvania",
+            "descuento": 20
+        },
+
+        {
+            "id": 5,
+            "titulo": "Axiom Verge",
+            "imagen": "/axiom-verge.jpg",
+            "precio": 14.99,
+            "descripcion": "Un metroidvania de ciencia ficción inspirado en los clásicos de 16 bits.",
+            "categoria": "Metroidvania",
+            "descuento": 20
+        },
+
+        {
+            "id": 6,
+            "titulo": "Axiom Verge",
+            "imagen": "/axiom-verge.jpg",
+            "precio": 14.99,
+            "descripcion": "Un metroidvania de ciencia ficción inspirado en los clásicos de 16 bits.",
+            "categoria": "Metroidvania",
+            "descuento": 20
         }
     ]
 }
