@@ -6,7 +6,7 @@ const juegos = [
         titulo: "Marvel's Spider-Man 2",
         precio: 44.19,
         descuento: 26,
-        imagenUrl: "../../public/hollow-knight.jpg",
+        imagenUrl: "",
         enlace: "/juego/spiderman-2",
     },
     {
@@ -14,7 +14,7 @@ const juegos = [
         titulo: "Cyberpunk 2077",
         precio: 29.99,
         descuento: 50,
-        imagenUrl: "../../public/hollow-knight.jpg",
+        imagenUrl: "",
         enlace: "/juego/cyberpunk-2077",
     },
 ];
