@@ -1,0 +1,26 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre_usuario": "admin",
+            "contraseña": "admin123",
+            "rol": "admin"
+        },
+        {
+            "id": 2,
+            "nombre_usuario": "usuario",
+            "contraseña": "usuario123",
+            "rol": "usuario"
+        }
+    ],
+    "juegos": [
+        {
+            "id": 1,
+            "titulo": "Hollow Knight",
+            "imagen": "/hollow-knight.jpg",
+            "precio": 14.99,
+            "descripcion": "Un metroidvania desafiante y bonito.",
+            "categoria": "Metroidvania"
+        }
+    ]
+}
