@@ -9,7 +9,7 @@ export function JuegoDestacado() {
     useEffect(() => {
         async function cargarJuegoDestacado() {
             try {
-                const data = await getJuegoById(1);
+                const data = await getJuegoById(5);
                 setJuego(data);
             } catch (error) {
                 console.error("Error cargando el juego destacado:", error);
@@ -32,7 +32,7 @@ export function JuegoDestacado() {
 
             <div className="absolute bottom-0 left-0 w-full h-[100px] clip-path-background" style={{ backgroundColor }}></div>
             
-            <div className="relative z-10 max-w-6xl mx-auto px-6 text-white flex flex-col justify-center h-full">
+            <div className="relative z-10 max-w-6xl mx-auto px-6 text-white flex flex-col justify-center h-full mt-20">
                 <h2 className="text-4xl font-bold mb-2">{juego.titulo}</h2>
                 <div className="flex items-center gap-4">
                     <span className="bg-pink-500 text-white text-sm px-3 py-1 rounded-md font-bold">-{juego.descuento}%</span>
