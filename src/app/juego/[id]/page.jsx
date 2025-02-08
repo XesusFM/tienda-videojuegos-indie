@@ -4,7 +4,7 @@ import { useCarrito } from "@/context/carritoContext";
 import { getJuegoById } from "@/services/api";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useParams } from "next/navigation";
-import { JuegoDestacadoCompra } from "@/components/SeccionJuegos/JuegoDestacadoCompra";
+import { JuegoDestacadoCompra } from "@/components/Juegos/JuegoDestacadoCompra";
 
 export default function PaginaJuego({ params }) {
     const { id } = useParams();

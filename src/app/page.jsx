@@ -1,7 +1,7 @@
 
 import { SeccionJuegos } from "@/components/SeccionJuegos/SeccionJuegos";
 import { Header } from "@/components/Header/Header";
-import { JuegoDestacado } from "@/components/SeccionJuegos/JuegoDestacado";
+import { JuegoDestacado } from "@/components/Juegos/JuegoDestacado";
 
 export default function Inicio() {
     return (
