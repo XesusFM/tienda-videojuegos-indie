@@ -25,7 +25,7 @@ export function JuegoDestacadoCompra({ id }) {
     return (
         <section className="relative w-full h-[500px] flex items-center overflow-hidden">
             <div 
-                className="absolute inset-0 bg-cover bg-center clip-path-diagonal"
+                className="absolute inset-0 bg-cover bg-center clip-path-diagonal "
                 style={{ backgroundImage: `url(${juego.imagen})`, filter: "brightness(0.6)" }}
             ></div>
 

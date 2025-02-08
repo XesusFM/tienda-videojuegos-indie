@@ -30,9 +30,10 @@ export default function PaginaJuego({ params }) {
     return (
         <main className="bg-gray-900 min-h-screen relative"> 
 
+        <div className="inset-0 z-0">
         <JuegoDestacadoCompra id={id} />
-
-            <div className="max-w-6xl mx-auto px-6 py-12 -mt-52 ">
+        </div>
+            <div className="relative z-10 max-w-6xl mx-auto px-6 py-12 -mt-52">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
