@@ -4,7 +4,6 @@ import { useCarrito } from "@/context/carritoContext";
 import { getJuegoById } from "@/services/api";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useParams } from "next/navigation";
-import { Header } from "@/components/Header/Header";
 import { JuegoDestacadoCompra } from "@/components/SeccionJuegos/JuegoDestacadoCompra";
 
 export default function PaginaJuego({ params }) {
@@ -31,10 +30,9 @@ export default function PaginaJuego({ params }) {
     return (
         <main className="bg-gray-900 min-h-screen relative"> 
 
-        <Header />
         <JuegoDestacadoCompra id={id} />
 
-            <div className="max-w-6xl mx-auto px-6 py-12">
+            <div className="max-w-6xl mx-auto px-6 py-12 -mt-52 ">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 

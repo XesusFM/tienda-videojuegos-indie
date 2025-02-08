@@ -1,4 +1,5 @@
 import { CarritoProvider } from "@/context/carritoContext";
+import { Header } from "@/components/Header/Header";
 import "./globals.css";
 
 export const metadata = {
@@ -11,8 +12,11 @@ export default function RootLayout({ children }) {
 
     <html lang="es">
       <body className="font-sans antialiased">
-        <CarritoProvider>   
-        {children}
+        <CarritoProvider>
+          <Header />
+          <main className="mt-20">
+            {children}
+          </main>
         </CarritoProvider>
       </body>
     </html>
