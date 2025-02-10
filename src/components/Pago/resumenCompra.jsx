@@ -6,7 +6,7 @@ export function ResumenCompra() {
 
     // Calcular total del carrito
     const precioTotal = carrito.reduce((total, juego) => total + juego.precio, 0);
-    const descuentoTotal = carrito.reduce((total, juego) => total + (juego.descuento || 0), 0);
+    const descuentoTotal = carrito.reduce((total, juego) => total + (juego.precio*(juego.descuento/100) || 0), 0);
     const subtotal = (precioTotal - descuentoTotal).toFixed(2);
 
     return (
