@@ -13,7 +13,7 @@ export function TarjetaJuego({ titulo, precio, descuento, imagen, enlace }) {
                     className="w-full h-56 object-cover transition-opacity group-hover:opacity-70"
                 />
                 {descuento > 0 && (
-                    <span className="absolute bottom-3 left-3 bg-orange-500 text-white text-sm font-bold px-2 py-1 rounded">
+                    <span className="absolute bottom-3 left-3 bg-pink-500 text-white text-sm font-bold px-2 py-1 rounded">
                         -{descuento}%
                     </span>
                 )}
