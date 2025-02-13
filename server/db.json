@@ -3,14 +3,34 @@
         {
             "id": 1,
             "nombre_usuario": "admin",
+            "email": "admin@tiendaindie.com",
             "contraseña": "admin123",
-            "rol": "admin"
+            "rol": "admin",
+            "favoritos": []
         },
         {
             "id": 2,
-            "nombre_usuario": "usuario",
+            "nombre_usuario": "usuario1",
+            "email": "usuario1@correo.com",
             "contraseña": "usuario123",
-            "rol": "usuario"
+            "rol": "usuario",
+            "favoritos": [
+                5,
+                7,
+                10
+            ]
+        },
+        {
+            "id": 3,
+            "nombre_usuario": "usuario2",
+            "email": "usuario2@correo.com",
+            "contraseña": "claveSegura456",
+            "rol": "usuario",
+            "favoritos": [
+                2,
+                4,
+                6
+            ]
         }
     ],
     "juegos": [
@@ -23,7 +43,6 @@
             "categoria": "Juegos de Acción",
             "descuento": 10
         },
-
         {
             "id": 2,
             "titulo": "Mafia III Definitive Edition",

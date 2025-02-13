@@ -1,3 +1,4 @@
+import { ProveedorAutenticacion } from "@/context/AuthContext";
 import { CarritoProvider } from "@/context/carritoContext";
 import { Header } from "@/components/Header/Header";
 import "./globals.css";
@@ -12,12 +13,14 @@ export default function RootLayout({ children }) {
 
     <html lang="es">
       <body className="font-sans antialiased">
+      <ProveedorAutenticacion>
         <CarritoProvider>
           <Header />
           <main className="mt-20">
             {children}
           </main>
         </CarritoProvider>
+        </ProveedorAutenticacion>
       </body>
     </html>
   );
