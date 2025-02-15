@@ -4,7 +4,8 @@ import Swal from "sweetalert2";
 import { FaTrash } from "react-icons/fa";
 
 export default function ResumenCarrito() {
-  const { carrito, removeItem, clearCart } = useCarrito();
+  // Usamos las funciones del contexto con sus nombres en español
+  const { carrito, eliminarDelCarrito, vaciarCarrito } = useCarrito();
 
   // Agrupar los juegos por su id y calcular la cantidad
   const aggregatedItems = carrito.reduce((acc, juego) => {
@@ -16,7 +17,7 @@ export default function ResumenCarrito() {
     return acc;
   }, {});
 
-  // Convertir el objeto agrupado en un array
+  // Convertir el objeto agrupado en un array para iterar
   const itemsArray = Object.values(aggregatedItems);
 
   // Función para eliminar una unidad de un artículo
@@ -30,7 +31,7 @@ export default function ResumenCarrito() {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        removeItem(id);
+        eliminarDelCarrito(id);
         Swal.fire({
           icon: "success",
           title: "Eliminado",
@@ -53,7 +54,7 @@ export default function ResumenCarrito() {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        clearCart();
+        vaciarCarrito();
         Swal.fire({
           icon: "success",
           title: "Carrito vaciado",
@@ -73,22 +74,15 @@ export default function ResumenCarrito() {
         <>
           <ul className="space-y-4">
             {itemsArray.map((item) => (
-              <li
-                key={item.id}
-                className="flex justify-between items-center border-b pb-2"
-              >
+              <li key={item.id} className="flex justify-between items-center border-b pb-2">
                 <div className="flex flex-col">
                   <span>
                     {item.titulo}{" "}
                     {item.quantity > 1 && (
-                      <span className="text-xs text-gray-400">
-                        (x{item.quantity})
-                      </span>
+                      <span className="text-xs text-gray-400">(x{item.quantity})</span>
                     )}
                   </span>
-                  <span className="text-sm text-gray-300">
-                    {item.precio.toFixed(2)}€ c/u
-                  </span>
+                  <span className="text-sm text-gray-300">{item.precio.toFixed(2)}€ c/u</span>
                 </div>
                 <button
                   onClick={() => handleRemoveItem(item.id)}
