@@ -105,89 +105,94 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
 
     return (
         <form
-            onSubmit={handleSubmit}
-            className="bg-gray-900 text-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mb-6"
-        >
-            <h2 className="text-2xl font-bold mb-4 text-pink-500">
-                {juegoSeleccionado ? "Editar Juego" : "Añadir Nuevo Juego"}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                    type="text"
-                    placeholder="Título"
-                    value={titulo}
-                    onChange={(e) => setTitulo(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Imagen (URL)"
-                    value={imagen}
-                    onChange={(e) => setImagen(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                />
-                <input
-                    type="number"
-                    placeholder="Precio"
-                    value={precio}
-                    onChange={(e) => setPrecio(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    step="0.01"
-                />
-
-                <select
-                    value={categoria}
-                    onChange={(e) => setCategoria(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                >
-                    <option value="">Selecciona una categoría</option>
-                    {categorias.map((cat) => (
-                        <option key={cat.id} value={cat.id}>
-                            {cat.nombre}
-                        </option>
-                    ))}
-                </select>
-                <input
-                    type="number"
-                    placeholder="Descuento (%)"
-                    value={descuento}
-                    onChange={(e) => setDescuento(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    step="0.01"
-                />
-            </div>
-            <div className="mt-4">
-                <textarea
-                    placeholder="Descripción"
-                    value={descripcion}
-                    onChange={(e) => setDescripcion(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    rows="4"
-                />
-            </div>
-            <div className="flex gap-4 mt-4">
+        onSubmit={handleSubmit}
+        className="bg-gray-900 text-white p-6 rounded-lg shadow-lg w-full max-w-6xl mx-auto"
+    >
+        <h2 className="text-2xl font-bold mb-4 text-pink-500 text-center">
+            {juegoSeleccionado ? "Editar Juego" : "Añadir Nuevo Juego"}
+        </h2>
+        
+        {/* Grid de dos columnas */}
+        <div className="grid grid-cols-2 gap-4">
+            <input
+                type="text"
+                placeholder="Título"
+                value={titulo}
+                onChange={(e) => setTitulo(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+            />
+            <input
+                type="text"
+                placeholder="Imagen (URL)"
+                value={imagen}
+                onChange={(e) => setImagen(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+            />
+            <input
+                type="number"
+                placeholder="Precio"
+                value={precio}
+                onChange={(e) => setPrecio(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+                step="0.01"
+            />
+            <select
+                value={categoria}
+                onChange={(e) => setCategoria(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+            >
+                <option value="">Selecciona una categoría</option>
+                {categorias.map((cat) => (
+                    <option key={cat.id} value={cat.id}>
+                        {cat.nombre}
+                    </option>
+                ))}
+            </select>
+            <input
+                type="number"
+                placeholder="Descuento (%)"
+                value={descuento}
+                onChange={(e) => setDescuento(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+                step="0.01"
+            />
+        </div>
+    
+        {/* Segunda fila: la descripción ocupa las dos columnas */}
+        <div className="mt-4">
+            <textarea
+                placeholder="Descripción"
+                value={descripcion}
+                onChange={(e) => setDescripcion(e.target.value)}
+                className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
+                required
+                rows="3"
+            />
+        </div>
+    
+        {/* Botones */}
+        <div className="flex gap-4 mt-4">
+            <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80"
+            >
+                {juegoSeleccionado ? "Guardar Cambios" : "Añadir Juego"}
+            </button>
+            {juegoSeleccionado && (
                 <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80"
+                    type="button"
+                    onClick={handleCancelar}
+                    className="w-full bg-gray-500 p-3 rounded text-white font-bold hover:opacity-80"
                 >
-                    {juegoSeleccionado ? "Guardar Cambios" : "Añadir Juego"}
+                    Cancelar
                 </button>
-                {juegoSeleccionado && (
-                    <button
-                        type="button"
-                        onClick={handleCancelar}
-                        className="w-full bg-gray-500 p-3 rounded text-white font-bold hover:opacity-80"
-                    >
-                        Cancelar
-                    </button>
-                )}
-            </div>
-        </form>
+            )}
+        </div>
+    </form>
     );
 }
