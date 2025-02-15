@@ -13,25 +13,29 @@ export const ProveedorAutenticacion = ({ children }) => {
         }
     }, []);
 
-    const iniciarSesion = async (email, contraseña) => {
+    const iniciarSesion = async (email, password) => {
         try {
             const res = await fetch("http://localhost:5000/usuarios");
             const usuarios = await res.json();
 
             const usuarioEncontrado = usuarios.find(
-                (u) => u.email === email && u.contraseña === contraseña
+                (u) => u.email === email && u.password === password
             );
 
             if (usuarioEncontrado) {
                 setUsuario(usuarioEncontrado);
                 localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
+                return usuarioEncontrado; // Retorna el usuario encontrado
             } else {
                 console.error("Usuario o contraseña incorrectos.");
+                return null;
             }
         } catch (error) {
             console.error("Error al autenticar usuario:", error);
+            return null;
         }
     };
+
 
     const cerrarSesion = () => {
         setUsuario(null);

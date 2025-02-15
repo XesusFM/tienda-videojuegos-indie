@@ -4,7 +4,7 @@
             "id": 1,
             "nombre_usuario": "admin",
             "email": "admin@tiendaindie.com",
-            "contraseña": "admin123",
+            "password": "admin123",
             "rol": "admin",
             "favoritos": []
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "nombre_usuario": "usuario1",
             "email": "usuario1@correo.com",
-            "contraseña": "usuario123",
+            "password": "usuario123",
             "rol": "usuario",
             "favoritos": [
                 5,
@@ -24,7 +24,7 @@
             "id": 3,
             "nombre_usuario": "usuario2",
             "email": "usuario2@correo.com",
-            "contraseña": "claveSegura456",
+            "password": "claveSegura456",
             "rol": "usuario",
             "favoritos": [
                 2,
