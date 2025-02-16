@@ -13,10 +13,9 @@ export default function Login() {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        // Llamamos a la función de autenticación
+        
         const resultado = await iniciarSesion(email, password);
 
-        // Si el login es exitoso, redirige a la página de inicio
         if (resultado) {
             router.push("/");
         } else {

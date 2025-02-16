@@ -1,12 +1,12 @@
 "use client";
 import { createContext, useContext, useState, useEffect } from "react";
+import Swal from "sweetalert2";
 
 const CarritoContext = createContext();
 
 export function CarritoProvider({ children }) {
     const [carrito, setCarrito] = useState([]);
 
-    // Cargar el carrito desde el Local Storage al iniciar
     useEffect(() => {
         const carritoGuardado = localStorage.getItem("carrito");
         if (carritoGuardado) {
@@ -14,17 +14,16 @@ export function CarritoProvider({ children }) {
         }
     }, []);
 
-    // Guardar el carrito en el Local Storage cada vez que cambie
     useEffect(() => {
         localStorage.setItem("carrito", JSON.stringify(carrito));
     }, [carrito]);
 
-    // Función para agregar un juego al carrito
+
     function agregarAlCarrito(juego) {
         setCarrito(prevCarrito => [...prevCarrito, juego]);
+        Swal.fire({ icon: "success", title: "Juego añadido al carrito" });
     }
 
-    // Función para eliminar una unidad del juego (la primera ocurrencia encontrada)
     function eliminarDelCarrito(id) {
         setCarrito(prevCarrito => {
             const indice = prevCarrito.findIndex(juego => juego.id === id);
@@ -35,7 +34,6 @@ export function CarritoProvider({ children }) {
         });
     }
 
-    // Función para vaciar todo el carrito
     function vaciarCarrito() {
         setCarrito([]);
     }

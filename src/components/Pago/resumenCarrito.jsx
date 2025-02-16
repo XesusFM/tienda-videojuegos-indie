@@ -4,10 +4,9 @@ import Swal from "sweetalert2";
 import { FaTrash } from "react-icons/fa";
 
 export default function ResumenCarrito() {
-  // Usamos las funciones del contexto con sus nombres en español
+
   const { carrito, eliminarDelCarrito, vaciarCarrito } = useCarrito();
 
-  // Agrupar los juegos por su id y calcular la cantidad
   const aggregatedItems = carrito.reduce((acc, juego) => {
     if (acc[juego.id]) {
       acc[juego.id].quantity += 1;
@@ -17,10 +16,8 @@ export default function ResumenCarrito() {
     return acc;
   }, {});
 
-  // Convertir el objeto agrupado en un array para iterar
   const itemsArray = Object.values(aggregatedItems);
 
-  // Función para eliminar una unidad de un artículo
   const handleRemoveItem = (id) => {
     Swal.fire({
       icon: "warning",
@@ -43,7 +40,6 @@ export default function ResumenCarrito() {
     });
   };
 
-  // Función para vaciar todo el carrito
   const handleClearCart = () => {
     Swal.fire({
       icon: "warning",

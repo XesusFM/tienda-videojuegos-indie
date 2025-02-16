@@ -33,15 +33,13 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
         : juegos;
 
         const handleEliminar = (juego) => {
-            console.log("Juego recibido para eliminar:", juego);
-            console.log("ID del juego:", juego?.id, " (tipo:", typeof juego?.id, ")"); // Depuración
         
             if (!juego || !juego.id || typeof juego.id !== "string") {
                 Swal.fire("Error", "ID del juego no válido", "error");
                 return;
             }
         
-            const juegoId = juego.id; // Mantenerlo como string
+            const juegoId = juego.id;
         
             Swal.fire({
                 icon: "warning",
@@ -53,7 +51,7 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
             }).then(async (result) => {
                 if (result.isConfirmed) {
                     try {
-                        // 1️⃣ Eliminar el juego de la base de datos (ID como string)
+                    
                         const res = await fetch(`http://localhost:5000/juegos/${juegoId}`, {
                             method: "DELETE",
                         });
@@ -62,7 +60,6 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
                             throw new Error("No se pudo eliminar el juego del servidor");
                         }
         
-                        // 2️⃣ Eliminar la imagen si existe
                         if (juego.imagen) {
                             const resImg = await fetch("/api/eliminar-imagen", {
                                 method: "DELETE",
@@ -75,9 +72,8 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
                             }
                         }
         
-                        // 3️⃣ Confirmar eliminación
                         Swal.fire("Eliminado", "El juego ha sido eliminado", "success");
-                        await fetchJuegos(); // Recargar la lista de juegos
+                        await fetchJuegos(); 
         
                     } catch (error) {
                         console.error("Error al eliminar el juego:", error);
@@ -86,10 +82,6 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
                 }
             });
         };
-        
-        
-        
-        
         
 
     return (

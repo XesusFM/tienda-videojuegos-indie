@@ -31,7 +31,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
             setDescuento(juegoSeleccionado.descuento || "");
             setModoEdicion(true);
         }
-    }, [juegoSeleccionado, categorias]); // 🔹 Ahora se actualiza correctamente cada vez que cambia el juego seleccionado
+    }, [juegoSeleccionado, categorias]);
 
     const manejarCambioImagen = (e) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -41,7 +41,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
 
     const manejarEnvio = async (e) => {
         e.preventDefault();
-        let urlImagen = juegoSeleccionado?.imagen || ""; // 🔹 Mantener la imagen existente si no se selecciona una nueva
+        let urlImagen = juegoSeleccionado?.imagen || "";
     
         if (imagen) {
             const formData = new FormData();
@@ -56,7 +56,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
     
                 if (respuestaSubida.ok) {
                     const datos = await respuestaSubida.json();
-                    urlImagen = datos.url; // 🔹 Solo actualiza la imagen si se sube una nueva
+                    urlImagen = datos.url; 
                 } else {
                     console.error("Error al subir la imagen");
                     return;
@@ -69,7 +69,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
     
         const juego = {
             titulo,
-            imagen: urlImagen, // 🔹 Mantiene la imagen anterior si no se seleccionó una nueva
+            imagen: urlImagen, 
             precio: parseFloat(precio),
             descripcion,
             categoria: categorias.find(cat => cat.id === categoria)?.nombre || categoria,
@@ -124,7 +124,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
         setCategoria("");
         setDescuento("");
         setModoEdicion(false);
-        onGuardado(); // 🔹 Notifica que se limpió el formulario y se cerró la edición
+        onGuardado(); // Actualiza el estado del componente padre
     };
 
     return (

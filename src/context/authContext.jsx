@@ -25,7 +25,7 @@ export const ProveedorAutenticacion = ({ children }) => {
             if (usuarioEncontrado) {
                 setUsuario(usuarioEncontrado);
                 localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
-                return usuarioEncontrado; // Retorna el usuario encontrado
+                return usuarioEncontrado; 
             } else {
                 console.error("Usuario o contraseña incorrectos.");
                 return null;
@@ -49,7 +49,7 @@ export const ProveedorAutenticacion = ({ children }) => {
     );
 };
 
-// Hook personalizado para acceder al contexto
+
 export function useAuth() {
     return useContext(ContextoAutenticacion);
 }

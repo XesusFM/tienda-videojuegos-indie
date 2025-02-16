@@ -2,21 +2,21 @@ import { NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
 
-export const runtime = "nodejs"; // Asegura que se ejecuta en Node.js
+export const runtime = "nodejs"; 
 
 export async function DELETE(req) {
     try {
-        const { imagen } = await req.json(); // Extraer URL de la imagen
+        const { imagen } = await req.json(); 
 
         if (!imagen || typeof imagen !== "string") {
             return NextResponse.json({ error: "No se recibió una imagen válida" }, { status: 400 });
         }
 
-        const nombreArchivo = path.basename(imagen); // Extraer solo el nombre del archivo
+        const nombreArchivo = path.basename(imagen); 
         const rutaArchivo = path.join(process.cwd(), "public/uploads", nombreArchivo);
 
         if (fs.existsSync(rutaArchivo)) {
-            fs.unlinkSync(rutaArchivo); // Eliminar la imagen
+            fs.unlinkSync(rutaArchivo); 
             return NextResponse.json({ mensaje: "Imagen eliminada correctamente" });
         } else {
             return NextResponse.json({ error: "Imagen no encontrada" }, { status: 404 });

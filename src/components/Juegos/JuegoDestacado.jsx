@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getJuegos } from "@/services/api"; // Obtener todos los juegos en lugar de solo uno
+import { getJuegos } from "@/services/api";
 
 export function JuegoDestacado() {
     const [juego, setJuego] = useState(null);
@@ -15,18 +15,18 @@ export function JuegoDestacado() {
                     const juegoAleatorio = juegos[Math.floor(Math.random() * juegos.length)];
                     setJuego(juegoAleatorio);
                 } else {
-                    setJuego(null); // No hay juegos, usar imagen por defecto
+                    setJuego(null); 
                 }
             } catch (error) {
                 console.error("Error cargando el juego destacado:", error);
-                setJuego(null); // En caso de error, también usar imagen por defecto
+                setJuego(null);
             }
         }
 
         cargarJuegoDestacado();
     }, []);
 
-    const imagenJuego = juego?.imagen || "/default-game.png"; // Imagen del juego o imagen por defecto
+    const imagenJuego = juego?.imagen || "/default-game.png"; 
 
     return (
         <section className="relative w-full h-[500px] flex items-center overflow-hidden" style={{ backgroundColor }}>
