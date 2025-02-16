@@ -12,6 +12,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
     const [categoria, setCategoria] = useState("");
     const [descuento, setDescuento] = useState("");
     const [categorias, setCategorias] = useState([]);
+    const [modoEdicion, setModoEdicion] = useState(false);
 
     useEffect(() => {
         fetch("http://localhost:5000/categorias")
@@ -28,14 +29,9 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
             const categoriaEncontrada = categorias.find(cat => cat.nombre === juegoSeleccionado.categoria);
             setCategoria(categoriaEncontrada ? categoriaEncontrada.id : juegoSeleccionado.categoria);
             setDescuento(juegoSeleccionado.descuento || "");
-        } else {
-            setTitulo("");
-            setPrecio("");
-            setDescripcion("");
-            setCategoria("");
-            setDescuento("");
+            setModoEdicion(true);
         }
-    }, [juegoSeleccionado, categorias]);
+    }, [juegoSeleccionado, categorias]); // 🔹 Ahora se actualiza correctamente cada vez que cambia el juego seleccionado
 
     const manejarCambioImagen = (e) => {
         if (e.target.files && e.target.files.length > 0) {
@@ -45,22 +41,22 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
 
     const manejarEnvio = async (e) => {
         e.preventDefault();
-        let urlImagen = "";
-
+        let urlImagen = juegoSeleccionado?.imagen || ""; // 🔹 Mantener la imagen existente si no se selecciona una nueva
+    
         if (imagen) {
             const formData = new FormData();
             formData.append("archivo", imagen);
             formData.append("titulo", titulo);
-
+    
             try {
                 const respuestaSubida = await fetch("/api/subir-imagen", {
                     method: "POST",
                     body: formData,
                 });
-
+    
                 if (respuestaSubida.ok) {
                     const datos = await respuestaSubida.json();
-                    urlImagen = datos.url;
+                    urlImagen = datos.url; // 🔹 Solo actualiza la imagen si se sube una nueva
                 } else {
                     console.error("Error al subir la imagen");
                     return;
@@ -70,21 +66,21 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 return;
             }
         }
-
+    
         const juego = {
             titulo,
-            imagen: urlImagen,
+            imagen: urlImagen, // 🔹 Mantiene la imagen anterior si no se seleccionó una nueva
             precio: parseFloat(precio),
             descripcion,
             categoria: categorias.find(cat => cat.id === categoria)?.nombre || categoria,
             descuento: parseFloat(descuento),
         };
-
+    
         try {
             let respuesta;
             let mensaje = "";
-
-            if (juegoSeleccionado && juegoSeleccionado.id) {
+    
+            if (modoEdicion && juegoSeleccionado?.id) {
                 respuesta = await fetch(`http://localhost:5000/juegos/${juegoSeleccionado.id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
@@ -99,17 +95,18 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 });
                 mensaje = "El juego se ha agregado exitosamente";
             }
-
+    
             if (respuesta.ok) {
                 Swal.fire({
                     icon: "success",
-                    title: juegoSeleccionado ? "Juego modificado" : "Juego agregado",
+                    title: modoEdicion ? "Juego modificado" : "Juego agregado",
                     text: mensaje,
                     timer: 1500,
                     showConfirmButton: false,
                 });
-
+    
                 fetchJuegos();
+                limpiarFormulario();
                 onGuardado();
             } else {
                 console.error("Error al guardar el juego");
@@ -119,10 +116,21 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
         }
     };
 
+    const limpiarFormulario = () => {
+        setTitulo("");
+        setImagen(null);
+        setPrecio("");
+        setDescripcion("");
+        setCategoria("");
+        setDescuento("");
+        setModoEdicion(false);
+        onGuardado(); // 🔹 Notifica que se limpió el formulario y se cerró la edición
+    };
+
     return (
-        <form onSubmit={manejarEnvio} className="bg-gray-900 text-white p-6 rounded-lg shadow-lg w-full max-w-6xl mx-auto">
+        <form onSubmit={manejarEnvio} className="bg-gray-900 text-white p-6 rounded-lg shadow-lg w-full max-w-6xl mx-auto mb-8">
             <h2 className="text-2xl font-bold mb-4 text-pink-500 text-center">
-                {juegoSeleccionado ? "Editar Juego" : "Añadir Nuevo Juego"}
+                {modoEdicion ? "Editar Juego" : "Añadir Nuevo Juego"}
             </h2>
 
             <div className="grid grid-cols-2 gap-4">
@@ -139,7 +147,6 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                     accept="image/*"
                     onChange={manejarCambioImagen}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded"
-                    required
                 />
                 <input
                     type="number"
@@ -187,8 +194,24 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
 
             <div className="flex gap-4 mt-4">
                 <button type="submit" className="w-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80">
-                    {juegoSeleccionado ? "Guardar Cambios" : "Añadir Juego"}
+                    {modoEdicion ? "Guardar Cambios" : "Añadir Juego"}
                 </button>
+                <button
+                    type="button"
+                    onClick={limpiarFormulario}
+                    className="w-full bg-gray-700 p-3 rounded text-white font-bold hover:bg-gray-600"
+                >
+                    Limpiar Formulario
+                </button>
+                {modoEdicion && (
+                    <button
+                        type="button"
+                        onClick={limpiarFormulario}
+                        className="w-full bg-red-600 p-3 rounded text-white font-bold hover:bg-red-500"
+                    >
+                        Cancelar Edición
+                    </button>
+                )}
             </div>
         </form>
     );

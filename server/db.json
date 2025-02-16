@@ -35,13 +35,13 @@
   ],
   "juegos": [
     {
-      "id": "dbcd",
       "titulo": "Prueba",
       "imagen": "/uploads/Prueba.jpg",
-      "precio": 49.99,
+      "precio": 500,
       "descripcion": "Juegardo",
       "categoria": "Acción/Aventura",
-      "descuento": 10
+      "descuento": 99,
+      "id": "dbcd"
     }
   ],
   "categorias": [
