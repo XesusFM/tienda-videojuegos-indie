@@ -35,85 +35,13 @@
   ],
   "juegos": [
     {
-      "titulo": "God of War",
-      "imagen": "/gow.jpg",
-      "precio": 20.02,
-      "descripcion": "Un épico juego de acción y aventuras basado en la mitología nórdica.",
-      "categoria": "Juegos de Acción",
-      "descuento": 121,
-      "id": "9"
-    },
-    {
-      "titulo": "Mafia III Definitive Edition",
-      "imagen": "/mafia3.jpg",
-      "precio": 19.99,
-      "descripcion": "Sumérgete en la Nueva Orleans de los años 60 en este juego de acción y crimen.",
+      "id": "dbcd",
+      "titulo": "Prueba",
+      "imagen": "/uploads/Prueba.jpg",
+      "precio": 49.99,
+      "descripcion": "Juegardo",
       "categoria": "Acción/Aventura",
-      "descuento": 18,
-      "id": "2"
-    },
-    {
-      "id": "3",
-      "titulo": "BioShock",
-      "imagen": "/bioshock.jpg",
-      "precio": 9.99,
-      "descripcion": "Explora la ciudad submarina de Rapture en este icónico shooter narrativo.",
-      "categoria": "FPS/Narrativo",
-      "descuento": 30
-    },
-    {
-      "titulo": "GTA V",
-      "imagen": "/gta.jpg",
-      "precio": 29.99,
-      "descripcion": "Un mundo abierto lleno de acción, crimen y caos en Los Santos.",
-      "categoria": "RPG/Acción",
-      "descuento": 25,
-      "id": "4"
-    },
-    {
-      "id": "5",
-      "titulo": "Kingdom Come: Deliverance",
-      "imagen": "/kingdom.jpg",
-      "precio": 39.99,
-      "descripcion": "Un RPG medieval realista con combate desafiante y una historia envolvente.",
-      "categoria": "RPG/Acción",
       "descuento": 10
-    },
-    {
-      "id": "6",
-      "titulo": "Assetto Corsa",
-      "imagen": "/assetto.jpg",
-      "precio": 19.99,
-      "descripcion": "Simulador de conducción realista con una gran variedad de coches y circuitos.",
-      "categoria": "Carreras/Simulación",
-      "descuento": 15
-    },
-    {
-      "titulo": "Outer Wilds",
-      "imagen": "/outerWilds.jpg",
-      "precio": 258,
-      "descripcion": "Explora un misterioso sistema solar atrapado en un bucle temporal.",
-      "categoria": "Aventura/Exploración",
-      "descuento": 20,
-      "id": "7"
-    },
-    {
-      "id": "8",
-      "titulo": "Portal",
-      "imagen": "/portal.jpg",
-      "precio": 9.99,
-      "descripcion": "Un innovador juego de puzles en primera persona con mecánicas únicas.",
-      "categoria": "Puzles/FPS",
-      "descuento": 50
-    },
-    {
-      "id": "1",
-      "titulo": "Hollow Knight",
-      "imagen": "/hollow-knight.jpg",
-      "precio": 14.99,
-      "descripcion": "Un metroidvania desafiante y bonito.",
-      "categoria": "Metroidvania",
-      "descuento": 20
     }
   ],
   "categorias": [
