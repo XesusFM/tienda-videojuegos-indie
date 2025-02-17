@@ -11,7 +11,7 @@ export default function AdminUsuarios() {
     };
 
     const handleGuardado = () => {
-        setUsuarioSeleccionado(null); // Limpiar selección después de guardar
+        setUsuarioSeleccionado(null);
     };
 
     const handleCancelarEdicion = () => {
@@ -20,9 +20,7 @@ export default function AdminUsuarios() {
 
     return (
         <div className="p-8 bg-gray-900 min-h-screen text-white">
-            <h1 className="text-3xl font-bold mb-6">Gestión de Usuarios</h1>
 
-            {/* Pasamos setUsuarioSeleccionado como prop a ambos componentes */}
             <FormularioUsuarios
                 usuarioSeleccionado={usuarioSeleccionado}
                 setUsuarioSeleccionado={setUsuarioSeleccionado}

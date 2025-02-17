@@ -29,7 +29,7 @@ export const UsuariosProvider = ({ children }) => {
             });
 
             if (res.ok) {
-                fetchUsuarios(); 
+                fetchUsuarios();
             }
         } catch (error) {
             console.error("Error al agregar usuario:", error);

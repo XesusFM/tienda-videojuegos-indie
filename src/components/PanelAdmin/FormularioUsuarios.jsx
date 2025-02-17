@@ -13,7 +13,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
         if (usuarioSeleccionado) {
             setNombreUsuario(usuarioSeleccionado.nombre_usuario || "");
             setEmail(usuarioSeleccionado.email || "");
-            setContraseña(""); // No mostramos la contraseña anterior
+            setContraseña("");
             setRol(usuarioSeleccionado.rol || "usuario");
         } else {
             limpiarFormulario();
@@ -30,11 +30,11 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const usuario = { 
-            nombre_usuario: nombreUsuario, 
-            email, 
-            contraseña: contraseña || usuarioSeleccionado?.contraseña, // Mantener la contraseña si no se cambia
-            rol 
+        const usuario = {
+            nombre_usuario: nombreUsuario,
+            email,
+            contraseña: contraseña || usuarioSeleccionado?.contraseña,
+            rol
         };
 
         if (usuarioSeleccionado) {

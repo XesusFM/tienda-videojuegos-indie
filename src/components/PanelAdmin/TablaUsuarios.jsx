@@ -67,7 +67,6 @@ export default function TablaUsuarios({ setUsuarioSeleccionado }) {
                 </tbody>
             </table>
 
-            {/* Paginación */}
             <div className="flex justify-center items-center mt-4 gap-4">
                 <button
                     onClick={() => setPaginaActual((prev) => Math.max(prev - 1, 1))}
