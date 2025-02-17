@@ -14,7 +14,7 @@ export function Header() {
         <header className="fixed h-20 top-0 left-0 w-full bg-black bg-opacity-90 p-4 text-white flex justify-between items-center z-50 shadow-md">
             <Logo />
             <LinksNavegacion />
-            
+
             <div className="flex items-center gap-4">
                 <Carrito count={1} />
                 {usuario ? (
@@ -30,9 +30,14 @@ export function Header() {
                         </button>
                     </>
                 ) : (
-                    <Link href="/login" className="bg-pink-500 px-4 py-2 rounded">
-                        Iniciar sesión
-                    </Link>
+                    <section>
+                        <Link href="/login" className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded mr-4">
+                            Iniciar sesión
+                        </Link> 
+                        <Link href="/registro" className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded">
+                            Registrarse
+                        </Link>
+                    </section>
                 )}
             </div>
         </header>
