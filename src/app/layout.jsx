@@ -1,5 +1,6 @@
 import { ProveedorAutenticacion } from "@/context/AuthContext";
 import { CarritoProvider } from "@/context/carritoContext";
+import { UsuariosProvider } from "@/context/usuariosContext";
 import { Header } from "@/components/Header/Header";
 import "./globals.css";
 
@@ -14,8 +15,10 @@ export default function RootLayout({ children }) {
       <body className="font-sans antialiased">
         <ProveedorAutenticacion>
           <CarritoProvider>
-            <Header />
-            <main className="mt-20">{children}</main>
+            <UsuariosProvider>
+              <Header />
+              <main className="mt-20">{children}</main>
+            </UsuariosProvider>
           </CarritoProvider>
         </ProveedorAutenticacion>
       </body>

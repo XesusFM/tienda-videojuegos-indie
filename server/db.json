@@ -1,49 +1,25 @@
 {
   "usuarios": [
     {
-      "id": "1",
       "nombre_usuario": "admin",
       "email": "admin@tiendaindie.com",
-      "password": "admin123",
+      "contraseña": "SDFSDF",
       "rol": "admin",
-      "favoritos": []
+      "id": "1"
     },
     {
-      "id": "2",
       "nombre_usuario": "usuario1",
       "email": "usuario1@correo.com",
-      "password": "usuario123",
-      "rol": "usuario",
-      "favoritos": []
+      "password": "asdasdasd",
+      "rol": "admin",
+      "id": "2"
     },
     {
-      "id": "3",
-      "nombre_usuario": "usuario2",
-      "email": "usuario2@correo.com",
-      "password": "claveSegura456",
-      "rol": "usuario",
-      "favoritos": []
-    },
-    {
-      "id": "1490",
-      "nombre": "Nadie",
-      "email": "nadie@gmail.com",
-      "password": "Feeelas",
-      "rol": "usuario"
-    },
-    {
-      "id": "dde9",
-      "nombre": "cacas",
-      "email": "cacas@gmail.com",
-      "password": "asdfad234",
-      "rol": "usuario"
-    },
-    {
-      "id": "b8f0",
-      "nombre": "sdfsdf",
-      "email": "cascas@gmail.com",
-      "password": "fsdsfsdfsf",
-      "rol": "usuario"
+      "id": "d111",
+      "nombre_usuario": "ASDF",
+      "email": "jesusfm1999@gmail.com",
+      "contraseña": "SDFGSFG",
+      "rol": "admin"
     }
   ],
   "juegos": [

@@ -90,13 +90,13 @@ export default function Registro() {
                     />
                     <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-md text-lg font-semibold hover:opacity-90 transition"
+                        className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-md text-lg font-semibold hover:opacity-90 transition"
                     >
                         Registrarse
                     </button>
                 </form>
 
-                <div className="flex justify-between w-full max-w-sm text-gray-400 mt-4 text-sm">
+                <div className="flex justify-center w-full max-w-sm text-gray-400 mt-4 text-sm">
                     <a href="/login" className="hover:underline">
                         ¿Ya tienes una cuenta? Inicia sesión
                     </a>
