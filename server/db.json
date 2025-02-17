@@ -42,6 +42,69 @@
       "categoria": "Acción/Aventura",
       "descuento": 99,
       "id": "dbcd"
+    },
+    {
+      "id": "f515",
+      "titulo": "bIOSHOK",
+      "imagen": "/uploads/bIOSHOK.jpg",
+      "precio": 2,
+      "descripcion": "ASDFA",
+      "categoria": "Juegos de Acción",
+      "descuento": 32
+    },
+    {
+      "id": "736f",
+      "titulo": "GDFG",
+      "imagen": "/uploads/GDFG.jpg",
+      "precio": 2234,
+      "descripcion": "234234D",
+      "categoria": "Juegos de Acción",
+      "descuento": 234
+    },
+    {
+      "id": "fcc6",
+      "titulo": "WER",
+      "imagen": "/uploads/WER.jpg",
+      "precio": 234,
+      "descripcion": "2342",
+      "categoria": "Acción/Aventura",
+      "descuento": 24
+    },
+    {
+      "id": "9781",
+      "titulo": "WERDFSF",
+      "imagen": "/uploads/WERDFSF.jpg",
+      "precio": 34,
+      "descripcion": "DFS",
+      "categoria": "FPS/Narrativo",
+      "descuento": 34
+    },
+    {
+      "id": "bcde",
+      "titulo": "wer",
+      "imagen": "/uploads/wer.jpg",
+      "precio": 42,
+      "descripcion": "sdfg",
+      "categoria": "FPS/Narrativo",
+      "descuento": 2
+    },
+    {
+      "id": "08b0",
+      "titulo": "dfgsdfg",
+      "imagen": "/uploads/dfgsdfg.jpg",
+      "precio": 345,
+      "descripcion": "sdfgsfg",
+      "categoria": "FPS/Narrativo",
+      "descuento": 345
+    },
+    {
+      "id": "a07b",
+      "titulo": "sdfg",
+      "imagen": "/uploads/sdfg.jpg",
+      "precio": 234,
+      "descripcion": "sdfgsfdg",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 234234
     }
   ],
   "categorias": [

@@ -1,5 +1,5 @@
 
-import { SeccionJuegos } from "@/components/SeccionJuegos/SeccionJuegos";
+import { SeccionJuegos } from "@/components/SeccionJuegos/JuegosDestacados";
 import { JuegoDestacado } from "@/components/Juegos/JuegoDestacado";
 
 export default function Inicio() {
