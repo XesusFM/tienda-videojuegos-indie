@@ -20,7 +20,7 @@ export function Header() {
                 {usuario ? (
                     <>
                         {usuario.rol === "admin" && (
-                            <Link href="/panelAdministrador" className="bg-blue-500 px-4 py-2 rounded">
+                            <Link href="/panelAdministrador" className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded">
                                 Panel Admin
                             </Link>
                         )}

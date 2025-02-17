@@ -15,9 +15,6 @@
       "password": "usuario123",
       "rol": "usuario",
       "favoritos": [
-        5,
-        7,
-        10
       ]
     },
     {
@@ -27,84 +24,81 @@
       "password": "claveSegura456",
       "rol": "usuario",
       "favoritos": [
-        2,
-        4,
-        6
       ]
     }
   ],
   "juegos": [
     {
-      "titulo": "Prueba",
-      "imagen": "/uploads/Prueba.jpg",
-      "precio": 500,
-      "descripcion": "Juegardo",
+      "titulo": "Bioshock",
+      "imagen": "/uploads/Bioshock.jpg",
+      "precio": 60,
+      "descripcion": "Sumérgete en la ciudad submarina de Rapture y descubre sus secretos.",
       "categoria": "Acción/Aventura",
-      "descuento": 99,
-      "id": "dbcd"
+      "descuento": 20,
+      "id": "bioshock"
     },
     {
-      "id": "f515",
-      "titulo": "bIOSHOK",
-      "imagen": "/uploads/bIOSHOK.jpg",
-      "precio": 2,
-      "descripcion": "ASDFA",
-      "categoria": "Juegos de Acción",
-      "descuento": 32
-    },
-    {
-      "id": "736f",
-      "titulo": "GDFG",
-      "imagen": "/uploads/GDFG.jpg",
-      "precio": 2234,
-      "descripcion": "234234D",
-      "categoria": "Juegos de Acción",
-      "descuento": 234
-    },
-    {
-      "id": "fcc6",
-      "titulo": "WER",
-      "imagen": "/uploads/WER.jpg",
-      "precio": 234,
-      "descripcion": "2342",
+      "titulo": "God of War",
+      "imagen": "/uploads/God_of_War.jpg",
+      "precio": 1599,
+      "descripcion": "Kratos se enfrenta a dioses nórdicos en una épica aventura de acción.",
       "categoria": "Acción/Aventura",
-      "descuento": 24
+      "descuento": 30,
+      "id": "god-of-war"
     },
     {
-      "id": "9781",
-      "titulo": "WERDFSF",
-      "imagen": "/uploads/WERDFSF.jpg",
-      "precio": 34,
-      "descripcion": "DFS",
-      "categoria": "FPS/Narrativo",
-      "descuento": 34
+      "titulo": "Grand Theft Auto V",
+      "imagen": "/uploads/Grand_Theft_Auto_V.jpg",
+      "precio": 999,
+      "descripcion": "Vive la vida criminal en Los Santos con tres protagonistas únicos.",
+      "categoria": "Acción/Aventura",
+      "descuento": 50,
+      "id": "gta-v"
     },
     {
-      "id": "bcde",
-      "titulo": "wer",
-      "imagen": "/uploads/wer.jpg",
-      "precio": 42,
-      "descripcion": "sdfg",
-      "categoria": "FPS/Narrativo",
-      "descuento": 2
+      "titulo": "Hollow Knight",
+      "imagen": "/uploads/Hollow_Knight.jpg",
+      "precio": 399,
+      "descripcion": "Explora un reino subterráneo lleno de insectos y desafíos metroidvania.",
+      "categoria": "Acción/Aventura",
+      "descuento": 10,
+      "id": "hollow-knight"
     },
     {
-      "id": "08b0",
-      "titulo": "dfgsdfg",
-      "imagen": "/uploads/dfgsdfg.jpg",
-      "precio": 345,
-      "descripcion": "sdfgsfg",
-      "categoria": "FPS/Narrativo",
-      "descuento": 345
+      "titulo": "Kingdom",
+      "imagen": "/uploads/Kingdom.jpg",
+      "precio": 299,
+      "descripcion": "Construye y defiende tu reino en un minimalista mundo de píxel art.",
+      "categoria": "Acción/Aventura",
+      "descuento": 15,
+      "id": "kingdom"
     },
     {
-      "id": "a07b",
-      "titulo": "sdfg",
-      "imagen": "/uploads/sdfg.jpg",
-      "precio": 234,
-      "descripcion": "sdfgsfdg",
-      "categoria": "Acción/Mundo Abierto",
-      "descuento": 234234
+      "titulo": "Mafia III",
+      "imagen": "/uploads/Mafia_III.jpg",
+      "precio": 899,
+      "descripcion": "Adéntrate en la vida criminal de New Bordeaux en los años 60.",
+      "categoria": "Acción/Aventura",
+      "descuento": 40,
+      "id": "mafia-3"
+    },
+    {
+      "titulo": "Outer Wilds",
+      "imagen": "/uploads/Outer_Wilds.jpg",
+      "precio": 799,
+      "descripcion": "Investiga un sistema solar atrapado en un bucle temporal infinito.",
+      "categoria": "Acción/Aventura",
+      "descuento": 25,
+      "id": "outer-wilds"
+    },
+    {
+      "titulo": "Portal",
+      "imagen": "/uploads/Portal.jpg",
+      "precio": 199,
+      "descripcion": "Resuelve rompecabezas con la icónica pistola de portales de Aperture Labs.",
+      "categoria": "Juegos de Acción",
+      "descuento": 15,
+      "id": "portal"
     }
   ],
   "categorias": [
