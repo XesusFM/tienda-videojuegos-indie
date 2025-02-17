@@ -14,8 +14,7 @@
       "email": "usuario1@correo.com",
       "password": "usuario123",
       "rol": "usuario",
-      "favoritos": [
-      ]
+      "favoritos": []
     },
     {
       "id": "3",
@@ -23,8 +22,28 @@
       "email": "usuario2@correo.com",
       "password": "claveSegura456",
       "rol": "usuario",
-      "favoritos": [
-      ]
+      "favoritos": []
+    },
+    {
+      "id": "1490",
+      "nombre": "Nadie",
+      "email": "nadie@gmail.com",
+      "password": "Feeelas",
+      "rol": "usuario"
+    },
+    {
+      "id": "dde9",
+      "nombre": "cacas",
+      "email": "cacas@gmail.com",
+      "password": "asdfad234",
+      "rol": "usuario"
+    },
+    {
+      "id": "b8f0",
+      "nombre": "sdfsdf",
+      "email": "cascas@gmail.com",
+      "password": "fsdsfsdfsf",
+      "rol": "usuario"
     }
   ],
   "juegos": [
