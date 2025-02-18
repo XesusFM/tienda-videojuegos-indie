@@ -64,7 +64,7 @@ export default function PaginaJuego({ params }) {
 
                         <div className="mt-6 flex gap-4">
                             <button className="bg-gray-700 p-3 rounded-full">
-                                <FaHeart size={20} className="text-white" />
+                                <FaHeart size={15} className="text-white" />
                             </button>
                             <button
                                 className="bg-pink-500 text-white flex items-center gap-2 px-6 py-3 rounded-md text-lg font-bold"

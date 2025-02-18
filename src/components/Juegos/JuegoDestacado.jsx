@@ -37,21 +37,6 @@ export function JuegoDestacado() {
             ></div>
 
             <div className="absolute bottom-0 left-0 w-full h-[100px] clip-path-background" style={{ backgroundColor }}></div>
-            
-            <div className="relative z-10 max-w-6xl mx-auto px-6 text-white flex flex-col justify-center h-full mt-20">
-                <h2 className="text-4xl font-bold mb-2">
-                    {juego ? juego.titulo : "Juego no disponible"}
-                </h2>
-                {juego && (
-                    <div className="flex items-center gap-4">
-                        <span className="bg-pink-500 text-white text-sm px-3 py-1 rounded-md font-bold">
-                            -{juego.descuento || 0}%
-                        </span>
-                        <span className="text-3xl font-semibold">{juego.precio ? `${juego.precio}€` : "Gratis"}</span>
-                    </div>
-                )}
-            </div>
-
             <style jsx>{`
                 .clip-path-diagonal {
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);

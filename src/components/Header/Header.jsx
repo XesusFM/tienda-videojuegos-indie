@@ -6,6 +6,7 @@ import PerfilUsuario from "./PerfilUsuario";
 import Carrito from "./Carrito";
 import { useAuth } from "@/context/authContext";
 import Link from "next/link";
+import { FaHeart } from "react-icons/fa";
 
 export function Header() {
     const { usuario, cerrarSesion } = useAuth();
@@ -16,7 +17,8 @@ export function Header() {
             <LinksNavegacion />
             
             <div className="flex items-center gap-4">
-                <Carrito count={1} />
+                
+                
                 {usuario ? (
                     <>
                         {usuario.rol === "admin" && (
@@ -24,6 +26,8 @@ export function Header() {
                                 Panel Admin
                             </Link>
                         )}
+                        <Carrito count={1} />
+                        <FaHeart size={20} className="text-white" />
                         <PerfilUsuario imageUrl={usuario.imageUrl || "/uploads/Portal.jpg"} />
                         <button onClick={cerrarSesion} className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded mr-4">
                             Cerrar sesión
