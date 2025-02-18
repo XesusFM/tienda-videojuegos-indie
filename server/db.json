@@ -1,24 +1,10 @@
 {
   "usuarios": [
     {
-      "nombre_usuario": "admin",
-      "email": "admin@tiendaindie.com",
-      "contraseña": "SDFSDF",
-      "rol": "admin",
-      "id": "1"
-    },
-    {
-      "nombre_usuario": "usuario1",
-      "email": "usuario1@correo.com",
-      "password": "asdasdasd",
-      "rol": "admin",
-      "id": "2"
-    },
-    {
-      "id": "d111",
-      "nombre_usuario": "ASDF",
-      "email": "jesusfm1999@gmail.com",
-      "contraseña": "SDFGSFG",
+      "id": "d6c7",
+      "nombre": "pepe",
+      "email": "pepe@gamil.com",
+      "password": "pepe",
       "rol": "admin"
     }
   ],

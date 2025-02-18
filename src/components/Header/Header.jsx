@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import LinksNavegacion from "./LinksNavegacion";
 import PerfilUsuario from "./PerfilUsuario";
 import Carrito from "./Carrito";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/context/authContext";
 import Link from "next/link";
 
 export function Header() {

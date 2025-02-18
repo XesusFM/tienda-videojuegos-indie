@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FaFacebook, FaGoogle, FaApple, FaDiscord } from "react-icons/fa";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/context/authContext";
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -72,7 +72,7 @@ export default function Login() {
             </div>
             <div className="w-1/2 relative hidden md:block">
                 <Image
-                    src="/assetto.jpg"
+                    src="/default-game.png"
                     alt="Gaming Background"
                     fill
                     className="opacity-90"

@@ -1,4 +1,4 @@
-import { ProveedorAutenticacion } from "@/context/AuthContext";
+import { ProveedorAutenticacion } from "@/context/authContext";
 import { CarritoProvider } from "@/context/carritoContext";
 import { UsuariosProvider } from "@/context/usuariosContext";
 import { Header } from "@/components/Header/Header";
