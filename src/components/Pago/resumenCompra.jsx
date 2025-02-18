@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 
 export function ResumenCompra() {
-    const { carrito } = useCarrito();
+    const { carrito, vaciarCarrito } = useCarrito();
     const { usuario } = useAuth();
     const router = useRouter();
 
@@ -28,6 +28,16 @@ export function ResumenCompra() {
                     router.push("/login");
                 }
             });
+            return;
+        }
+        vaciarCarrito();
+        if (carrito.length === 0) {
+            Swal.fire({
+                icon: "warning",
+                title: "El carrito está vacío",
+                text: "Por favor, añada juegos al carrito si desea comprarlos.",
+                confirmButtonText: "Aceptar",
+            })
             return;
         }
 

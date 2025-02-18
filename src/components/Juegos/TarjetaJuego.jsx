@@ -23,7 +23,7 @@ export function TarjetaJuego({ titulo, precio, descuento, imagen, enlace }) {
                 <h3 className="text-white text-lg font-medium truncate group-hover:text-orange-500">
                     {titulo}
                 </h3>
-                <p className="text-white text-xl font-bold">{precio.toFixed(2)}€</p>
+                <p className="text-white text-xl font-bold">{(precio-(precio*descuento/100)).toFixed(2)}€</p>
             </div>
         </Link>
     );

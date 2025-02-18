@@ -46,8 +46,8 @@ export default function PaginaJuego({ params }) {
 
                         <div className="flex items-center gap-4 mt-4">
                             <span className="bg-pink-500 text-white text-sm px-3 py-1 rounded-md font-bold">-{juego.descuento}%</span>
-                            <span className="text-xl line-through text-gray-400">{(juego.precio / (1 - juego.descuento / 100)).toFixed(2)}€</span>
-                            <span className="text-3xl font-semibold">{juego.precio}€</span>
+                            <span className="text-xl line-through text-gray-400">{(juego.precio).toFixed(2)}€</span>
+                            <span className="text-3xl font-semibold">{(juego.precio-(juego.precio*juego.descuento/100)).toFixed(2)}€</span>
                         </div>
 
                         <div className="mt-6 flex gap-4">

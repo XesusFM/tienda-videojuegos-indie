@@ -21,7 +21,7 @@
     {
       "titulo": "God of War",
       "imagen": "/uploads/God_of_War.jpg",
-      "precio": 1599,
+      "precio": 60,
       "descripcion": "Kratos se enfrenta a dioses nórdicos en una épica aventura de acción.",
       "categoria": "Acción/Aventura",
       "descuento": 30,
@@ -30,7 +30,7 @@
     {
       "titulo": "Grand Theft Auto V",
       "imagen": "/uploads/Grand_Theft_Auto_V.jpg",
-      "precio": 999,
+      "precio": 40,
       "descripcion": "Vive la vida criminal en Los Santos con tres protagonistas únicos.",
       "categoria": "Acción/Aventura",
       "descuento": 50,
@@ -39,7 +39,7 @@
     {
       "titulo": "Hollow Knight",
       "imagen": "/uploads/Hollow_Knight.jpg",
-      "precio": 399,
+      "precio": 20,
       "descripcion": "Explora un reino subterráneo lleno de insectos y desafíos metroidvania.",
       "categoria": "Acción/Aventura",
       "descuento": 10,
@@ -48,7 +48,7 @@
     {
       "titulo": "Kingdom",
       "imagen": "/uploads/Kingdom.jpg",
-      "precio": 299,
+      "precio": 90,
       "descripcion": "Construye y defiende tu reino en un minimalista mundo de píxel art.",
       "categoria": "Acción/Aventura",
       "descuento": 15,
@@ -57,7 +57,7 @@
     {
       "titulo": "Mafia III",
       "imagen": "/uploads/Mafia_III.jpg",
-      "precio": 899,
+      "precio": 39.99,
       "descripcion": "Adéntrate en la vida criminal de New Bordeaux en los años 60.",
       "categoria": "Acción/Aventura",
       "descuento": 40,
@@ -66,7 +66,7 @@
     {
       "titulo": "Outer Wilds",
       "imagen": "/uploads/Outer_Wilds.jpg",
-      "precio": 799,
+      "precio": 80,
       "descripcion": "Investiga un sistema solar atrapado en un bucle temporal infinito.",
       "categoria": "Acción/Aventura",
       "descuento": 25,
@@ -75,7 +75,7 @@
     {
       "titulo": "Portal",
       "imagen": "/uploads/Portal.jpg",
-      "precio": 199,
+      "precio": 10,
       "descripcion": "Resuelve rompecabezas con la icónica pistola de portales de Aperture Labs.",
       "categoria": "Juegos de Acción",
       "descuento": 15,
