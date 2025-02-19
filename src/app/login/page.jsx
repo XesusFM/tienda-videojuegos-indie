@@ -72,7 +72,7 @@ export default function Login() {
             </div>
             <div className="w-1/2 relative hidden md:block">
                 <Image
-                    src="/default-game.png"
+                    src="/portada.jpg"
                     alt="Gaming Background"
                     fill
                     className="opacity-90"

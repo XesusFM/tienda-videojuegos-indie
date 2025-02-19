@@ -8,8 +8,8 @@ export function Footer() {
             <div className="border-t border-pink-500 max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <div className="py-5">
-                    <h2 className="text-pink-500 text-2xl font-bold">Tienda de Juegos Indie</h2>
-                    <p className="text-sm mt-2">Descubre y compra los mejores videojuegos indie con grandes descuentos.</p>
+                    <h2 className="text-pink-500 text-2xl font-bold">Tienda de Juegos Online</h2>
+                    <p className="text-sm mt-2">Descubre y compra los mejores videojuegos robados con grandes descuentos.</p>
                 </div>
 
                 <div className="py-5">
