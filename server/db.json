@@ -50,7 +50,7 @@
       "imagen": "/uploads/Kingdom.jpg",
       "precio": 90,
       "descripcion": "Construye y defiende tu reino en un minimalista mundo de píxel art.",
-      "categoria": "Acción/Aventura",
+      "categoria": "Metroidvania",
       "descuento": 15,
       "id": "kingdom"
     },
@@ -68,7 +68,7 @@
       "imagen": "/uploads/Outer_Wilds.jpg",
       "precio": 80,
       "descripcion": "Investiga un sistema solar atrapado en un bucle temporal infinito.",
-      "categoria": "Acción/Aventura",
+      "categoria": "Carreras/Simulación",
       "descuento": 25,
       "id": "outer-wilds"
     },
@@ -77,7 +77,7 @@
       "imagen": "/uploads/Portal.jpg",
       "precio": 10,
       "descripcion": "Resuelve rompecabezas con la icónica pistola de portales de Aperture Labs.",
-      "categoria": "Juegos de Acción",
+      "categoria": "Puzles/FPS",
       "descuento": 15,
       "id": "portal"
     }
