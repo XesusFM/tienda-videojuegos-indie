@@ -15,7 +15,7 @@ export function TarjetaJuego({ titulo, precio, descuento, imagen, enlace }) {
             </div>
 
             <div className="mt-2 px-2">
-                <h3 className="text-white text-lg font-medium truncate group-hover:text-orange-500">
+                <h3 className="text-white text-lg font-medium truncate group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-purple-500 group-hover:bg-clip-text group-hover:text-transparent">
                     {titulo}
                 </h3>
                 <p className="text-white text-xl font-bold">{(precio - (precio * descuento / 100)).toFixed(2)}€</p>
