@@ -67,7 +67,7 @@ export default function Registro() {
                     <input
                         type="text"
                         placeholder="Nombre"
-                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
                         value={nombre}
                         onChange={(e) => setNombre(e.target.value)}
                         required
@@ -75,7 +75,7 @@ export default function Registro() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -83,7 +83,7 @@ export default function Registro() {
                     <input
                         type="password"
                         placeholder="Contraseña"
-                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                        className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
