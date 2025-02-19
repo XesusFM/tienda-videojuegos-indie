@@ -42,21 +42,21 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
     const manejarEnvio = async (e) => {
         e.preventDefault();
         let urlImagen = juegoSeleccionado?.imagen || "";
-    
+
         if (imagen) {
             const formData = new FormData();
             formData.append("archivo", imagen);
             formData.append("titulo", titulo);
-    
+
             try {
                 const respuestaSubida = await fetch("/api/subir-imagen", {
                     method: "POST",
                     body: formData,
                 });
-    
+
                 if (respuestaSubida.ok) {
                     const datos = await respuestaSubida.json();
-                    urlImagen = datos.url; 
+                    urlImagen = datos.url;
                 } else {
                     console.error("Error al subir la imagen");
                     return;
@@ -66,20 +66,20 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 return;
             }
         }
-    
+
         const juego = {
             titulo,
-            imagen: urlImagen, 
+            imagen: urlImagen,
             precio: parseFloat(precio),
             descripcion,
             categoria: categorias.find(cat => cat.id === categoria)?.nombre || categoria,
             descuento: parseFloat(descuento),
         };
-    
+
         try {
             let respuesta;
             let mensaje = "";
-    
+
             if (modoEdicion && juegoSeleccionado?.id) {
                 respuesta = await fetch(`http://localhost:5000/juegos/${juegoSeleccionado.id}`, {
                     method: "PUT",
@@ -95,7 +95,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 });
                 mensaje = "El juego se ha agregado exitosamente";
             }
-    
+
             if (respuesta.ok) {
                 Swal.fire({
                     icon: "success",
@@ -104,7 +104,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                     timer: 1500,
                     showConfirmButton: false,
                 });
-    
+
                 fetchJuegos();
                 limpiarFormulario();
                 onGuardado();
@@ -124,7 +124,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
         setCategoria("");
         setDescuento("");
         setModoEdicion(false);
-        onGuardado(); // Actualiza el estado del componente padre
+        onGuardado();
     };
 
     return (
@@ -134,84 +134,59 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
             </h2>
 
             <div className="grid grid-cols-2 gap-4">
-                <input
-                    type="text"
-                    placeholder="Título"
-                    value={titulo}
-                    onChange={(e) => setTitulo(e.target.value)}
+
+                <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                />
-                <input
-                    type="file"
-                    accept="image/*"
-                    onChange={manejarCambioImagen}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded"
-                />
-                <input
-                    type="number"
-                    placeholder="Precio"
-                    value={precio}
-                    onChange={(e) => setPrecio(e.target.value)}
+                    required />
+
+                <input type="file" accept="image/*" onChange={manejarCambioImagen}
+                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded" />
+
+                <input type="number" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    step="0.01"
-                />
-                <select
-                    value={categoria}
-                    onChange={(e) => setCategoria(e.target.value)}
+                    required step="0.01" />
+
+                <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                >
+                    required >
+
                     <option value="">Selecciona una categoría</option>
+
                     {categorias.map((cat) => (
                         <option key={cat.id} value={cat.id}>
                             {cat.nombre}
                         </option>
                     ))}
+
                 </select>
-                <input
-                    type="number"
-                    placeholder="Descuento (%)"
-                    value={descuento}
-                    onChange={(e) => setDescuento(e.target.value)}
+
+                <input type="number" placeholder="Descuento (%)" value={descuento} onChange={(e) => setDescuento(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    step="0.01"
-                />
+                    required step="0.01" />
+
             </div>
 
             <div className="mt-4">
-                <textarea
-                    placeholder="Descripción"
-                    value={descripcion}
-                    onChange={(e) => setDescripcion(e.target.value)}
+                <textarea placeholder="Descripción" value={descripcion} onChange={(e) => setDescripcion(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500"
-                    required
-                    rows={3}
-                />
+                    required rows={3} />
             </div>
 
             <div className="flex gap-4 mt-4">
                 <button type="submit" className="w-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80">
                     {modoEdicion ? "Guardar Cambios" : "Añadir Juego"}
                 </button>
-                <button
-                    type="button"
-                    onClick={limpiarFormulario}
-                    className="w-full bg-gray-700 p-3 rounded text-white font-bold hover:bg-gray-600"
-                >
+                
+                <button type="button" onClick={limpiarFormulario} className="w-full bg-gray-700 p-3 rounded text-white font-bold hover:bg-gray-600">
                     Limpiar Formulario
                 </button>
+
                 {modoEdicion && (
-                    <button
-                        type="button"
-                        onClick={limpiarFormulario}
-                        className="w-full bg-red-600 p-3 rounded text-white font-bold hover:bg-red-500"
-                    >
+                    <button type="button" onClick={limpiarFormulario} className="w-full bg-red-600 p-3 rounded text-white font-bold hover:bg-red-500">
                         Cancelar Edición
                     </button>
                 )}
+
             </div>
         </form>
     );

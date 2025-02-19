@@ -60,10 +60,11 @@ export function Filtros() {
     };
 
     return (
-        <div className="bg-gray-800 p-4 rounded-lg shadow-lg text-white flex flex-wrap gap-4 items-center justify-between">
+        <div className="bg-gray-800 p-4 rounded-lg shadow-lg text-white flex flex-wrap items-center gap-4">
 
             <select value={categoriaSeleccionada} onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500">
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-auto flex-grow"
+            >
                 <option value="">Todas las categorías</option>
                 {categorias.map((cat) => (
                     <option key={cat.id} value={cat.nombre}>
@@ -73,26 +74,27 @@ export function Filtros() {
             </select>
 
             <input type="number" placeholder="Precio mínimo" value={precioMin} onChange={(e) => setPrecioMin(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-32" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <input type="number" placeholder="Precio máximo" value={precioMax} onChange={(e) => setPrecioMax(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-32" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <input type="number" placeholder="Descuento mínimo (%)" value={descuentoMin} onChange={(e) => setDescuentoMin(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-32" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <div className="flex gap-2">
                 <button onClick={aplicarFiltros}
-                    className="bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80 transition">
+                    className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-3 rounded text-white font-bold hover:opacity-80 transition">
                     Aplicar Filtros
                 </button>
                 <button onClick={limpiarFiltros}
-                    className="bg-gray-700 p-3 rounded text-white font-bold hover:bg-gray-600 transition">
+                    className="bg-gray-700 px-4 py-3 rounded text-white font-bold hover:bg-gray-600 transition">
                     Limpiar
                 </button>
             </div>
         </div>
     );
+
 }
 
 export default Filtros;
