@@ -3,6 +3,7 @@ import { CarritoProvider } from "@/context/carritoContext";
 import { UsuariosProvider } from "@/context/usuariosContext";
 import { Header } from "@/components/Header/Header";
 import "./globals.css";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Tienda de Videojuegos",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
             <UsuariosProvider>
               <Header />
               <main className="mt-20">{children}</main>
+              <Footer />
             </UsuariosProvider>
           </CarritoProvider>
         </ProveedorAutenticacion>
