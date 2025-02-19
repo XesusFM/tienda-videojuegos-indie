@@ -14,10 +14,8 @@ const PagoExitoso = () => {
                 <p className="text-lg mt-2 text-gray-400">
                     Tu compra se ha realizado correctamente.
                 </p>
-                <button
-                    className="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded"
-                    onClick={() => router.push("/tienda")}
-                >
+                <button className="mt-6 bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded"
+                    onClick={() => router.push("/tienda")}>
                     Volver a la tienda
                 </button>
             </div>

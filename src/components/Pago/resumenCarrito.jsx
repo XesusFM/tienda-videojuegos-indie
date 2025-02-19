@@ -80,20 +80,14 @@ export default function ResumenCarrito() {
                   </span>
                   <span className="text-sm text-gray-300">{item.precio.toFixed(2)}€ c/u</span>
                 </div>
-                <button
-                  onClick={() => handleRemoveItem(item.id)}
-                  className="text-red-500 hover:text-red-700"
-                  aria-label="Eliminar artículo"
-                >
+                <button onClick={() => handleRemoveItem(item.id)} className="text-red-500 hover:text-red-700" aria-label="Eliminar artículo">
                   <FaTrash />
                 </button>
               </li>
             ))}
           </ul>
-          <button
-            onClick={handleClearCart}
-            className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded"
-          >
+          <button onClick={handleClearCart}
+            className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">
             Vaciar carrito
           </button>
         </>
