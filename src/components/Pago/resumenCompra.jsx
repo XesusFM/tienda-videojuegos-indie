@@ -49,7 +49,6 @@ export function ResumenCompra() {
 
             <h2 className="text-lg font-semibold mb-4">Resumen</h2>
 
-
             <div className="mb-4 space-y-2">
                 <div className="flex justify-between text-gray-300">
                     <span>Precio oficial</span>
@@ -67,8 +66,7 @@ export function ResumenCompra() {
 
             <button
                 onClick={handlePago}
-                className="w-full bg-[#FF3366] hover:bg-[#FF1E57] text-white font-bold py-3 rounded-lg flex items-center justify-center transition"
-            >
+                className="w-full bg-[#FF3366] hover:bg-[#FF1E57] text-white font-bold py-3 rounded-lg flex items-center justify-center transition">
                 Proceder con el pago <span className="ml-2">➜</span>
             </button>
 

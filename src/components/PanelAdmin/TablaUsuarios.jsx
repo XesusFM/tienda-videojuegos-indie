@@ -48,41 +48,31 @@ export default function TablaUsuarios({ setUsuarioSeleccionado }) {
                             <td className="py-3">{usuario.nombre_usuario}</td>
                             <td className="py-3">{usuario.email}</td>
                             <td className="py-3">{usuario.rol}</td>
+
                             <td className="py-3 flex justify-center gap-3">
-                                <button
-                                    onClick={() => setUsuarioSeleccionado(usuario)}
-                                    className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-400 transition"
-                                >
+                                <button onClick={() => setUsuarioSeleccionado(usuario)} className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-400 transition">
                                     Editar
                                 </button>
-                                <button
-                                    onClick={() => handleEliminar(usuario.id)}
-                                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-400 transition"
-                                >
+                                <button onClick={() => handleEliminar(usuario.id)} className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-400 transition">
                                     Eliminar
                                 </button>
                             </td>
+
                         </tr>
                     ))}
                 </tbody>
             </table>
 
             <div className="flex justify-center items-center mt-4 gap-4">
-                <button
-                    onClick={() => setPaginaActual((prev) => Math.max(prev - 1, 1))}
-                    disabled={paginaActual === 1}
-                    className="px-4 py-2 bg-gray-600 text-white rounded-md disabled:opacity-50"
-                >
+                <button onClick={() => setPaginaActual((prev) => Math.max(prev - 1, 1))} disabled={paginaActual === 1}
+                    className="px-4 py-2 bg-gray-600 text-white rounded-md disabled:opacity-50">
                     Anterior
                 </button>
                 <span>
                     Página {paginaActual} de {totalPaginas}
                 </span>
-                <button
-                    onClick={() => setPaginaActual((prev) => Math.min(prev + 1, totalPaginas))}
-                    disabled={paginaActual === totalPaginas}
-                    className="px-4 py-2 bg-gray-600 text-white rounded-md disabled:opacity-50"
-                >
+                <button onClick={() => setPaginaActual((prev) => Math.min(prev + 1, totalPaginas))} disabled={paginaActual === totalPaginas}
+                    className="px-4 py-2 bg-gray-600 text-white rounded-md disabled:opacity-50">
                     Siguiente
                 </button>
             </div>

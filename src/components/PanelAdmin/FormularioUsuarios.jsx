@@ -51,53 +51,27 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
             <h2 className="text-white text-2xl font-bold mb-4">
                 {usuarioSeleccionado ? "Editar Usuario" : "Añadir Usuario"}
             </h2>
-            <input
-                type="text"
-                placeholder="Nombre de usuario"
-                value={nombreUsuario}
-                onChange={(e) => setNombreUsuario(e.target.value)}
-                required
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-                type="password"
-                placeholder="Nueva contraseña (opcional)"
-                value={contraseña}
-                onChange={(e) => setContraseña(e.target.value)}
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"
-            />
+            <input type="text" placeholder="Nombre de usuario" value={nombreUsuario} onChange={(e) => setNombreUsuario(e.target.value)} required
+                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"/>
 
-            <select
-                value={rol}
-                onChange={(e) => setRol(e.target.value)}
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md"
-            >
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required 
+            className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"/>
+
+            <input type="password" placeholder="Nueva contraseña (opcional)" value={contraseña} onChange={(e) => setContraseña(e.target.value)}
+                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-orange-500"/>
+
+            <select value={rol} onChange={(e) => setRol(e.target.value)} className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md">
                 <option value="usuario">Usuario</option>
                 <option value="admin">Administrador</option>
             </select>
 
             <div className="flex gap-4">
-                <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-md font-semibold hover:opacity-90 transition"
-                >
+                <button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-md font-semibold hover:opacity-90 transition">
                     {usuarioSeleccionado ? "Guardar Cambios" : "Registrar"}
                 </button>
 
                 {usuarioSeleccionado && (
-                    <button
-                        type="button"
-                        onClick={limpiarFormulario}
-                        className="w-full bg-gray-600 text-white py-3 rounded-md font-semibold hover:bg-gray-500 transition"
-                    >
+                    <button type="button" onClick={limpiarFormulario} className="w-full bg-gray-600 text-white py-3 rounded-md font-semibold hover:bg-gray-500 transition">
                         Cancelar Edición
                     </button>
                 )}

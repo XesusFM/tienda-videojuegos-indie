@@ -86,8 +86,7 @@ export default function ResumenCarrito() {
               </li>
             ))}
           </ul>
-          <button onClick={handleClearCart}
-            className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">
+          <button onClick={handleClearCart} className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">
             Vaciar carrito
           </button>
         </>

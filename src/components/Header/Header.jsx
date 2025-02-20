@@ -18,7 +18,6 @@ export function Header() {
             
             <div className="flex items-center gap-4">
                 
-                
                 {usuario ? (
                     <>
                         {usuario.rol === "admin" && (

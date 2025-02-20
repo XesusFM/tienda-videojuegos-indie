@@ -31,8 +31,7 @@ export function JuegoDestacado() {
     return (
         <section className="relative w-full h-[500px] flex items-center overflow-hidden" style={{ backgroundColor }}>
 
-            <div className="absolute inset-0 bg-cover bg-center clip-path-diagonal"
-                style={{ backgroundImage: `url(${imagenJuego})`, filter: "brightness(0.6)" }}>
+            <div className="absolute inset-0 bg-cover bg-center clip-path-diagonal" style={{ backgroundImage: `url(${imagenJuego})`, filter: "brightness(0.6)" }}>
             </div>
 
             <div className="absolute bottom-0 left-0 w-full h-[100px] clip-path-background" style={{ backgroundColor }}></div>
