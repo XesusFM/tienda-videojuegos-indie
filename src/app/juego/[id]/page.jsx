@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useCarrito } from "@/context/carritoContext";
+import { useCarrito } from "@/context/CarritoContext";
 import { getJuegoById } from "@/services/api";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useParams } from "next/navigation";

@@ -1,6 +1,6 @@
-import { ProveedorAutenticacion } from "@/context/authContext";
-import { CarritoProvider } from "@/context/carritoContext";
-import { UsuariosProvider } from "@/context/usuariosContext";
+import { ProveedorAutenticacion } from "@/context/AuthContext";
+import { CarritoProvider } from "@/context/CarritoContext";
+import { UsuariosProvider } from "@/context/UsuariosContext";
 import { Header } from "@/components/Header/Header";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";

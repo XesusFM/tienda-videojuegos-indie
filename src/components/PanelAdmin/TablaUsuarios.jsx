@@ -1,5 +1,5 @@
 "use client";
-import { useUsuarios } from "@/context/usuariosContext";
+import { useUsuarios } from "@/context/UsuariosContext";
 import { useState } from "react";
 import Swal from "sweetalert2";
 

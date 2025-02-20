@@ -1,5 +1,5 @@
 "use client";
-import { useCarrito } from "@/context/carritoContext";
+import { useCarrito } from "@/context/CarritoContext";
 import Swal from "sweetalert2";
 import { FaTrash } from "react-icons/fa";
 

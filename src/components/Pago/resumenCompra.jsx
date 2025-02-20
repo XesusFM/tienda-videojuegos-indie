@@ -1,6 +1,6 @@
 "use client";
-import { useCarrito } from "@/context/carritoContext";
-import { useAuth } from "@/context/authContext";
+import { useCarrito } from "@/context/CarritoContext";
+import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 

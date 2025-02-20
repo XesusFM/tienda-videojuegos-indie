@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useUsuarios } from "@/context/usuariosContext";
+import { useUsuarios } from "@/context/UsuariosContext";
 
 export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSeleccionado }) {
     const { agregarUsuario, editarUsuario } = useUsuarios();

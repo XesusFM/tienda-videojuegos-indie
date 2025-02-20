@@ -1,5 +1,5 @@
 "use client";
-import PagoExitoso from "@/components/Pago/pagoExitoso";
+import PagoExitoso from "@/components/Pago/PagoExitoso";
 
 export default function pagoHecho() {
     return (

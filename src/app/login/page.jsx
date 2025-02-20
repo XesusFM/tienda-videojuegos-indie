@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FaFacebook, FaGoogle, FaApple, FaDiscord } from "react-icons/fa";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Login() {
     const [email, setEmail] = useState("");

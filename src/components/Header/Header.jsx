@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import LinksNavegacion from "./LinksNavegacion";
 import PerfilUsuario from "./PerfilUsuario";
 import Carrito from "./Carrito";
-import { useAuth } from "@/context/authContext";
+import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 
