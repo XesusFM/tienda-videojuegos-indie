@@ -25,7 +25,7 @@ export function Header() {
                                 Panel Admin
                             </Link>
                         )}
-                        <Carrito count={1} />
+                        
                         <FaHeart size={20} className="text-white" />
                         <PerfilUsuario imageUrl={usuario.imageUrl || "/uploads/Portal.jpg"} />
                         <button onClick={cerrarSesion} className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded mr-4">
@@ -34,7 +34,7 @@ export function Header() {
                     </>
                 ) : (
                     <section>
-                        
+                        <Carrito count={1} />
                         <Link href="/login" className="bg-gradient-to-r from-pink-500 to-purple-500 px-4 py-2 rounded mr-4">
                             Iniciar sesión
                         </Link> 
