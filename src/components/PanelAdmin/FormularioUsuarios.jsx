@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useUsuarios } from "@/context/UsuariosContext";
+import Swal from "sweetalert2";
 
 export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSeleccionado }) {
     const { agregarUsuario, editarUsuario } = useUsuarios();
@@ -13,12 +14,21 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
         if (usuarioSeleccionado) {
             setNombreUsuario(usuarioSeleccionado.nombre || "");
             setEmail(usuarioSeleccionado.email || "");
-            setContraseña("");
+            setContraseña(""); // No mostrar la contraseña anterior por seguridad
             setRol(usuarioSeleccionado.rol || "usuario");
         } else {
             limpiarFormulario();
         }
     }, [usuarioSeleccionado]);
+
+    const validarCorreo = (correo) => {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(correo);
+    };
+
+    const validarContraseña = (contraseña) => {
+        return /^(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña);
+    };
 
     const limpiarFormulario = () => {
         setNombreUsuario("");
@@ -30,20 +40,38 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (!validarCorreo(email)) {
+            Swal.fire("Error", "Introduce un correo válido.", "error");
+            return;
+        }
+
+        if (!usuarioSeleccionado && !validarContraseña(contraseña)) {
+            Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres, una mayúscula y un número.", "error");
+            return;
+        }
+
         const usuario = {
             nombre: nombreUsuario,
             email,
-            contraseña: contraseña || usuarioSeleccionado?.contraseña,
+            contraseña: contraseña || usuarioSeleccionado?.contraseña, // Mantener la contraseña anterior si no la cambian
             rol
         };
 
-        if (usuarioSeleccionado) {
-            await editarUsuario(usuarioSeleccionado.id, usuario);
-        } else {
-            await agregarUsuario(usuario);
-        }
+        try {
+            if (usuarioSeleccionado) {
+                await editarUsuario(usuarioSeleccionado.id, usuario);
+                Swal.fire("Éxito", "Usuario editado correctamente", "success");
+            } else {
+                await agregarUsuario(usuario);
+                Swal.fire("Éxito", "Usuario registrado correctamente", "success");
+            }
 
-        limpiarFormulario();
+            limpiarFormulario();
+        } catch (error) {
+            console.error("Error al guardar usuario:", error);
+            Swal.fire("Error", "Hubo un problema al guardar el usuario.", "error");
+        }
     };
 
     return (
@@ -51,16 +79,17 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
             <h2 className="text-white text-2xl font-bold mb-4">
                 {usuarioSeleccionado ? "Editar Usuario" : "Añadir Usuario"}
             </h2>
-            <input type="text" placeholder="Nombre de usuario" value={nombreUsuario} onChange={(e) => setNombreUsuario(e.target.value)} required
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+            
+            <input type="text" placeholder="Nombre de usuario" value={nombreUsuario} onChange={(e) => setNombreUsuario(e.target.value)}
+                required className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required 
-            className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required
+                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
             <input type="password" placeholder="Nueva contraseña (opcional)" value={contraseña} onChange={(e) => setContraseña(e.target.value)}
-                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"/>
+                className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
-            <select value={rol} onChange={(e) => setRol(e.target.value)} className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+            <select value={rol} onChange={(e) => setRol(e.target.value)} className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500">
                 <option value="usuario">Usuario</option>
                 <option value="admin">Administrador</option>
             </select>

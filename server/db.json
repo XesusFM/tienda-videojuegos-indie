@@ -1,11 +1,32 @@
 {
   "usuarios": [
     {
-      "id": "d6c7",
       "nombre": "pepe",
       "email": "pepe@gamil.com",
-      "password": "pepe",
-      "rol": "admin"
+      "contraseña": "sda",
+      "rol": "admin",
+      "id": "d6c7"
+    },
+    {
+      "nombre": "asdf",
+      "email": "asdf@gmail.com",
+      "contraseña": "dfg",
+      "rol": "usuario",
+      "id": "28b5"
+    },
+    {
+      "nombre": "jose",
+      "email": "adasdf@gmail.com",
+      "contraseña": "asdf",
+      "rol": "usuario",
+      "id": "3ac4"
+    },
+    {
+      "id": "c3d0",
+      "nombre": "sdf",
+      "email": "sdfsdf@gamil.com",
+      "contraseña": "asdfasdfS45",
+      "rol": "usuario"
     }
   ],
   "juegos": [
