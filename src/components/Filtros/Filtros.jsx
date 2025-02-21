@@ -74,13 +74,13 @@ export function Filtros() {
             </select>
 
             <input type="number" placeholder="Precio mínimo" value={precioMin} onChange={(e) => setPrecioMin(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <input type="number" placeholder="Precio máximo" value={precioMax} onChange={(e) => setPrecioMax(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <input type="number" placeholder="Descuento mínimo (%)" value={descuentoMin} onChange={(e) => setDescuentoMin(e.target.value)}
-                className="p-3 bg-gray-700 border border-gray-600 rounded focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
+                className="p-3 bg-gray-700 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 w-full sm:w-36 flex-grow" />
 
             <div className="flex gap-2">
                 <button onClick={aplicarFiltros}
