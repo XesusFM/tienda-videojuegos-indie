@@ -1,106 +1,175 @@
 {
   "usuarios": [
     {
-      "nombre": "pepe",
-      "email": "pepe@gamil.com",
-      "contraseña": "sda",
+      "nombre": "admin ",
+      "email": "admin@gmail.com",
+      "contraseña": "Renaido123",
       "rol": "admin",
       "id": "d6c7"
-    },
-    {
-      "nombre": "asdf",
-      "email": "asdf@gmail.com",
-      "contraseña": "dfg",
-      "rol": "usuario",
-      "id": "28b5"
-    },
-    {
-      "nombre": "jose",
-      "email": "adasdf@gmail.com",
-      "contraseña": "asdf",
-      "rol": "usuario",
-      "id": "3ac4"
-    },
-    {
-      "id": "c3d0",
-      "nombre": "sdf",
-      "email": "sdfsdf@gamil.com",
-      "contraseña": "asdfasdfS45",
-      "rol": "usuario"
     }
   ],
   "juegos": [
     {
-      "titulo": "Bioshock",
-      "imagen": "/uploads/Bioshock.jpg",
+      "id": "6492",
+      "titulo": "Assetto Corsa",
+      "imagen": "/uploads/Assetto_Corsa.jpg",
       "precio": 60,
-      "descripcion": "Sumérgete en la ciudad submarina de Rapture y descubre sus secretos.",
-      "categoria": "Acción/Aventura",
-      "descuento": 20,
-      "id": "bioshock"
+      "descripcion": " Un simulador de carreras realista con una física precisa y una amplia variedad de vehículos y circuitos. Ideal para los amantes del automovilismo.",
+      "categoria": "Carreras/Simulación",
+      "descuento": 10
     },
     {
+      "id": "4239",
+      "titulo": "Bioshock ",
+      "imagen": "/uploads/Bioshock_.jpg",
+      "precio": 20,
+      "descripcion": "Un juego de disparos en primera persona con una historia profunda ambientada en la ciudad submarina de Rapture, donde la biotecnología ha alterado a sus habitantes.",
+      "categoria": "Acción/Aventura",
+      "descuento": 10
+    },
+    {
+      "id": "02be",
       "titulo": "God of War",
       "imagen": "/uploads/God_of_War.jpg",
-      "precio": 60,
-      "descripcion": "Kratos se enfrenta a dioses nórdicos en una épica aventura de acción.",
-      "categoria": "Acción/Aventura",
-      "descuento": 30,
-      "id": "god-of-war"
+      "precio": 80,
+      "descripcion": "Kratos regresa en una aventura épica con su hijo Atreus, explorando la mitología nórdica en una historia cargada de emoción y acción.",
+      "categoria": "Juegos de Acción",
+      "descuento": 10
     },
     {
-      "titulo": "Grand Theft Auto V",
-      "imagen": "/uploads/Grand_Theft_Auto_V.jpg",
-      "precio": 40,
-      "descripcion": "Vive la vida criminal en Los Santos con tres protagonistas únicos.",
-      "categoria": "Acción/Aventura",
-      "descuento": 50,
-      "id": "gta-v"
+      "id": "31b9",
+      "titulo": "Grand Theft Auto",
+      "imagen": "/uploads/Grand_Theft_Auto.jpg",
+      "precio": 80,
+      "descripcion": "La famosa saga de mundo abierto que te permite explorar ciudades llenas de acción, crimen y misiones intensas.",
+      "categoria": "Carreras/Simulación",
+      "descuento": 80
     },
     {
+      "id": "8f5b",
       "titulo": "Hollow Knight",
       "imagen": "/uploads/Hollow_Knight.jpg",
       "precio": 20,
-      "descripcion": "Explora un reino subterráneo lleno de insectos y desafíos metroidvania.",
-      "categoria": "Acción/Aventura",
-      "descuento": 10,
-      "id": "hollow-knight"
-    },
-    {
-      "titulo": "Kingdom",
-      "imagen": "/uploads/Kingdom.jpg",
-      "precio": 90,
-      "descripcion": "Construye y defiende tu reino en un minimalista mundo de píxel art.",
+      "descripcion": "Un metroidvania con una estética de arte dibujado a mano, donde exploras un vasto y misterioso reino subterráneo lleno de insectos y criaturas peligrosas.",
       "categoria": "Metroidvania",
-      "descuento": 15,
-      "id": "kingdom"
+      "descuento": 5
     },
     {
+      "titulo": "Kingdom Come: Deliverance",
+      "imagen": "/uploads/Kingdom_Come:_Deliverance.jpg",
+      "precio": 30,
+      "descripcion": " Un RPG medieval realista con un sistema de combate detallado y una historia basada en hechos históricos.",
+      "categoria": "RPG/Acción",
+      "descuento": 45,
+      "id": "99de"
+    },
+    {
+      "id": "0966",
       "titulo": "Mafia III",
       "imagen": "/uploads/Mafia_III.jpg",
-      "precio": 39.99,
-      "descripcion": "Adéntrate en la vida criminal de New Bordeaux en los años 60.",
+      "precio": 40,
+      "descripcion": "Un juego de acción en tercera persona ambientado en los años 60, donde tomas el papel de un veterano de guerra en busca de venganza.",
       "categoria": "Acción/Aventura",
-      "descuento": 40,
-      "id": "mafia-3"
+      "descuento": 90
     },
     {
-      "titulo": "Outer Wilds",
-      "imagen": "/uploads/Outer_Wilds.jpg",
-      "precio": 80,
-      "descripcion": "Investiga un sistema solar atrapado en un bucle temporal infinito.",
-      "categoria": "Carreras/Simulación",
-      "descuento": 25,
-      "id": "outer-wilds"
+      "titulo": "The Outer Worlds",
+      "imagen": "/uploads/The_Outer_Worlds.jpg",
+      "precio": 45,
+      "descripcion": "Un RPG de ciencia ficción desarrollado por Obsidian, donde exploras un universo lleno de corporaciones corruptas y decisiones morales.",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 20,
+      "id": "bd4f"
     },
     {
-      "titulo": "Portal",
-      "imagen": "/uploads/Portal.jpg",
-      "precio": 10,
-      "descripcion": "Resuelve rompecabezas con la icónica pistola de portales de Aperture Labs.",
+      "id": "64c3",
+      "titulo": "Portal ",
+      "imagen": "/uploads/Portal_.jpg",
+      "precio": 70,
+      "descripcion": "Un juego de rompecabezas en primera persona donde usas una pistola de portales para resolver desafíos en un laboratorio controlado por una IA sarcástica.",
       "categoria": "Puzles/FPS",
-      "descuento": 15,
-      "id": "portal"
+      "descuento": 60
+    },
+    {
+      "id": "eb96",
+      "titulo": "Microsoft Flight Simulator",
+      "imagen": "/uploads/Microsoft_Flight_Simulator.jpg",
+      "precio": 60,
+      "descripcion": "Un simulador de vuelo ultra realista con paisajes detallados y condiciones meteorológicas en tiempo real.",
+      "categoria": "Carreras/Simulación",
+      "descuento": 70
+    },
+    {
+      "titulo": "The Legend of Zelda: Breath of the Wild",
+      "imagen": "/uploads/The_Legend_of_Zelda:_Breath_of_the_Wild.jpg",
+      "precio": 80,
+      "descripcion": "Una aventura de mundo abierto con una historia épica, exploración y mecánicas innovadoras en el universo de Hyrule.",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 0,
+      "id": "977b"
+    },
+    {
+      "id": "d285",
+      "titulo": "Super Mario",
+      "imagen": "/uploads/Super_Mario.jpg",
+      "precio": 80,
+      "descripcion": "Un clásico de plataformas protagonizado por el icónico fontanero de Nintendo en su misión de rescatar a la princesa Peach.",
+      "categoria": "Aventura/Exploración",
+      "descuento": 0
+    },
+    {
+      "id": "2740",
+      "titulo": "Mario Kart",
+      "imagen": "/uploads/Mario_Kart.jpg",
+      "precio": 80,
+      "descripcion": "El divertido juego de carreras de karts con personajes del universo Mario, potenciadores y pistas llenas de acción.",
+      "categoria": "Carreras/Simulación",
+      "descuento": 0
+    },
+    {
+      "titulo": "FIFA ",
+      "imagen": "/uploads/FIFA_.jpg",
+      "precio": 100,
+      "descripcion": "El simulador de fútbol más popular, con equipos y jugadores reales, modos de juego competitivos y realismo mejorado en cada edición.",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 80,
+      "id": "ddb7"
+    },
+    {
+      "id": "b8c2",
+      "titulo": "Spider-Man",
+      "imagen": "/uploads/Spider-Man.jpg",
+      "precio": 40,
+      "descripcion": "Un juego de acción y mundo abierto donde controlas a Peter Parker balanceándote por Nueva York y enfrentando a villanos icónicos.",
+      "categoria": "Aventura/Exploración",
+      "descuento": 10
+    },
+    {
+      "titulo": "S.T.A.L.K.E.R.",
+      "imagen": "/uploads/S.T.A.L.K.E.R..jpg",
+      "precio": 70,
+      "descripcion": " Un FPS de supervivencia ambientado en la zona de exclusión de Chernóbil, donde el peligro acecha en cada rincón.",
+      "categoria": "RPG/Acción",
+      "descuento": 20,
+      "id": "9943"
+    },
+    {
+      "id": "fad8",
+      "titulo": "The Last of Us",
+      "imagen": "/uploads/The_Last_of_Us.jpg",
+      "precio": 20,
+      "descripcion": " Un juego de acción y aventura con una historia emocional que sigue a Joel y Ellie en un mundo postapocalíptico lleno de infectados.",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 15
+    },
+    {
+      "id": "f9b4",
+      "titulo": "Assassin’s Creed",
+      "imagen": "/uploads/Assassin’s_Creed.jpg",
+      "precio": 20,
+      "descripcion": "Una saga de acción y sigilo que explora diferentes épocas históricas con combates fluidos y una trama basada en asesinos y templarios.",
+      "categoria": "Acción/Mundo Abierto",
+      "descuento": 5
     }
   ],
   "categorias": [
