@@ -48,36 +48,22 @@ export default function Login() {
                     <div className="flex-grow border-t border-gray-600"></div>
                 </div>
                 <form className="w-full max-w-sm" onSubmit={handleLogin}>
-                    <input
-                        type="email"
-                        placeholder="Email"
+                    <input type="email" placeholder="Email"
                         className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="********"
+                        value={email} onChange={(e) => setEmail(e.target.value)}/>
+
+                    <input type="password" placeholder="********"
                         className="w-full p-3 mb-4 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-md text-lg font-semibold hover:opacity-90 transition"
-                    >
+                        value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        
+                    <button type="submit"
+                        className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-md text-lg font-semibold hover:opacity-90 transition">
                         Iniciar sesión
                     </button>
                 </form>
             </div>
             <div className="w-1/2 relative hidden md:block">
-                <Image
-                    src="/portada.jpg"
-                    alt="Gaming Background"
-                    fill
-                    className="opacity-90"
-                    style={{ objectFit: "cover" }}
-                />
+                <Image src="/portada.jpg" alt="Gaming Background" fill className="opacity-90" style={{ objectFit: "cover" }}/>
             </div>
         </div>
     );
