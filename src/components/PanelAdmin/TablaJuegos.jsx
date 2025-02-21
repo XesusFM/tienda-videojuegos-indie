@@ -85,7 +85,7 @@ export default function TablaJuegos({ onSeleccionarJuego }) {
 
 
     return (
-        <div className="overflow-x-auto bg-gray-900 p-6 rounded-lg shadow-lg text-white">
+        <div className="overflow-x-auto max-h-[500px] bg-gray-900 p-6 rounded-lg shadow-lg text-white">
             <table className="min-w-full table-fixed border border-gray-700">
                 <thead>
                     <tr className="bg-gray-800 text-pink-400">
