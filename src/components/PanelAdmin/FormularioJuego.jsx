@@ -133,22 +133,23 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 {modoEdicion ? "Editar Juego" : "Añadir Nuevo Juego"}
             </h2>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
 
                 <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
                     required />
 
-                <input type="file" accept="image/*" onChange={manejarCambioImagen}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded" />
 
                 <input type="number" placeholder="Precio" value={precio} onChange={(e) => setPrecio(e.target.value)}
                     className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
                     required step="0.01" />
 
+                <input type="number" placeholder="Descuento (%)" value={descuento} onChange={(e) => setDescuento(e.target.value)}
+                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:outline-none focus:ring-2 focus:ring-pink-500"
+                    required step="0.01" />
+
                 <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
-                    required >
+                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500" required >
 
                     <option value="">Selecciona una categoría</option>
 
@@ -160,9 +161,8 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
 
                 </select>
 
-                <input type="number" placeholder="Descuento (%)" value={descuento} onChange={(e) => setDescuento(e.target.value)}
-                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded focus:outline-none focus:outline-none focus:ring-2 focus:ring-pink-500"
-                    required step="0.01" />
+                <input type="file" accept="image/*" onChange={manejarCambioImagen}
+                    className="w-full p-3 bg-gray-800 border border-gray-600 rounded" />
 
             </div>
 
@@ -176,7 +176,7 @@ export default function FormularioJuego({ juegoSeleccionado, onGuardado }) {
                 <button type="submit" className="w-full bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded text-white font-bold hover:opacity-80">
                     {modoEdicion ? "Guardar Cambios" : "Añadir Juego"}
                 </button>
-                
+
                 <button type="button" onClick={limpiarFormulario} className="w-full bg-gray-700 p-3 rounded text-white font-bold hover:bg-gray-600">
                     Limpiar Formulario
                 </button>
