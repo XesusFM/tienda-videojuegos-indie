@@ -17,6 +17,18 @@ const LinksNavegacion = () => (
 
         <Link href="/" className="group flex items-center space-x-2 cursor-pointer hover:bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-2 rounded transition-colors duration-300">
             <span className="text-2xl font-bold text-white">
+                Favoritos
+            </span>
+        </Link>
+
+        <Link href="/" className="group flex items-center space-x-2 cursor-pointer hover:bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-2 rounded transition-colors duration-300">
+            <span className="text-2xl font-bold text-white">
+                Soporte
+            </span>
+        </Link>
+
+        <Link href="/" className="group flex items-center space-x-2 cursor-pointer hover:bg-gradient-to-r from-pink-500 to-purple-500 px-3 py-2 rounded transition-colors duration-300">
+            <span className="text-2xl font-bold text-white">
                 Nosotros
             </span>
         </Link>

@@ -28,7 +28,7 @@ export function Header() {
 
                         <div className="relative">
                             <button onClick={() => setMenuAbierto(!menuAbierto)} className="focus:outline-none">
-                                <PerfilUsuario imageUrl={usuario.imageUrl || "/uploads/Portal.jpg"} />
+                                <PerfilUsuario imageUrl={"/user.jpg"} />
                             </button>
 
                             {menuAbierto && (
