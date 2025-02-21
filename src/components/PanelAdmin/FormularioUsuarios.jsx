@@ -11,7 +11,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
 
     useEffect(() => {
         if (usuarioSeleccionado) {
-            setNombreUsuario(usuarioSeleccionado.nombre_usuario || "");
+            setNombreUsuario(usuarioSeleccionado.nombre || "");
             setEmail(usuarioSeleccionado.email || "");
             setContraseña("");
             setRol(usuarioSeleccionado.rol || "usuario");
@@ -31,7 +31,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
     const handleSubmit = async (e) => {
         e.preventDefault();
         const usuario = {
-            nombre_usuario: nombreUsuario,
+            nombre: nombreUsuario,
             email,
             contraseña: contraseña || usuarioSeleccionado?.contraseña,
             rol

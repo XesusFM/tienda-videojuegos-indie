@@ -45,7 +45,7 @@ export default function TablaUsuarios({ setUsuarioSeleccionado }) {
                     {usuariosPaginados.map((usuario) => (
                         <tr key={usuario.id} className="border-t border-gray-600">
                             <td className="py-3">{usuario.id}</td>
-                            <td className="py-3">{usuario.nombre_usuario}</td>
+                            <td className="py-3">{usuario.nombre}</td>
                             <td className="py-3">{usuario.email}</td>
                             <td className="py-3">{usuario.rol}</td>
 
