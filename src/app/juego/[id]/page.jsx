@@ -1,20 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useCarrito } from "@/context/CarritoContext";
-import { getJuegoById } from "@/services/api";
+import { useJuegos } from "@/context/JuegosContext";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import { JuegoDestacadoCompra } from "@/components/Juegos/JuegoDestacadoCompra";
 
 export default function PaginaJuego({ params }) {
     const { id } = useParams();
+    const { getJuegoById } = useJuegos();
     const [juego, setJuego] = useState(null);
     const { agregarAlCarrito } = useCarrito();
 
     useEffect(() => {
         async function cargarJuego() {
             try {
-                const data = await getJuegoById(id);
+                const data = await getJuegoById(id); 
                 setJuego(data);
             } catch (error) {
                 console.error("Error cargando el juego:", error);
