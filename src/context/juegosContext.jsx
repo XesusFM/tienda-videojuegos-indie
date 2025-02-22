@@ -7,7 +7,6 @@ const JuegosContext = createContext();
 export function JuegosProvider({ children }) {
     const [juegos, setJuegos] = useState([]);
 
-    // Obtiene todos los juegos y los guarda en el estado
     const fetchJuegos = async () => {
         try {
             const res = await fetch(`${BASE_URL}/juegos`);
@@ -19,13 +18,10 @@ export function JuegosProvider({ children }) {
         }
     };
 
-    // Obtiene un juego por ID, revisa si ya está en el estado antes de hacer fetch
     const getJuegoById = async (id) => {
-        // 1️⃣ Buscar primero en `juegos` para evitar hacer `fetch` si ya está en memoria
         const juegoExistente = juegos.find(j => j.id === id);
         if (juegoExistente) return juegoExistente;
 
-        // 2️⃣ Si no está en el estado, hacer una petición a la API
         try {
             const res = await fetch(`${BASE_URL}/juegos/${id}`);
             if (!res.ok) throw new Error("Juego no encontrado");
@@ -41,7 +37,7 @@ export function JuegosProvider({ children }) {
     }, []);
 
     return (
-        <JuegosContext.Provider value={{ juegos, fetchJuegos, getJuegoById }}>
+        <JuegosContext.Provider value={{ juegos, setJuegos, fetchJuegos, getJuegoById }}>
             {children}
         </JuegosContext.Provider>
     );
