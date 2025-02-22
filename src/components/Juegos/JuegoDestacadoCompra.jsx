@@ -1,19 +1,15 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { getJuegoById } from "@/services/api";
+import { useJuegos } from "@/context/JuegosContext"; 
 
 export function JuegoDestacadoCompra({ id }) {
+    const { getJuegoById } = useJuegos(); 
     const [juego, setJuego] = useState(null);
 
     useEffect(() => {
         async function cargarJuegoDestacado() {
-            try {
-                const data = await getJuegoById(id);
-                setJuego(data);
-            } catch (error) {
-                console.error("Error cargando el juego destacado:", error);
-            }
+            const data = await getJuegoById(id); 
+            setJuego(data);
         }
         cargarJuegoDestacado();
     }, [id]);

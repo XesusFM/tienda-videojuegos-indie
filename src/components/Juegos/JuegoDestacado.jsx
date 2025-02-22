@@ -1,30 +1,21 @@
 "use client";
 import { useEffect, useState } from "react";
-import { getJuegos } from "@/services/api";
+import { useJuegos } from "@/context/JuegosContext"; 
 
 export function JuegoDestacado() {
+    const { juegos, fetchJuegos } = useJuegos(); 
     const [juego, setJuego] = useState(null);
     const [backgroundColor, setBackgroundColor] = useState("#111827");
 
     useEffect(() => {
-        async function cargarJuegoDestacado() {
-            try {
-                const juegos = await getJuegos();
-
-                if (juegos.length > 0) {
-                    const juegoAleatorio = juegos[Math.floor(Math.random() * juegos.length)];
-                    setJuego(juegoAleatorio);
-                } else {
-                    setJuego(null);
-                }
-            } catch (error) {
-                console.error("Error cargando el juego destacado:", error);
-                setJuego(null);
-            }
+        if (juegos.length > 0) {
+            const juegoAleatorio = juegos[Math.floor(Math.random() * juegos.length)];
+            setJuego(juegoAleatorio);
+        } else {
+            
+            fetchJuegos();
         }
-
-        cargarJuegoDestacado();
-    }, []);
+    }, [juegos]); 
 
     const imagenJuego = juego?.imagen || "/default-game.png";
 
