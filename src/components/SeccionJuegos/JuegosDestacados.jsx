@@ -1,5 +1,5 @@
 "use client";
-import { JuegosProvider, useJuegos } from "@/context/JuegosContext"; 
+import { useJuegos } from "@/context/JuegosContext"; 
 import { TarjetaJuego } from "@/components/Juegos/TarjetaJuego";
 
 export function SeccionJuegos() {

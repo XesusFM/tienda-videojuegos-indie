@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useJuegos } from "@/context/JuegosContext";
 
 export function Filtros() {
-    const { juego, setJuegos, fetchJuegos } = useJuegos();
+    const { setJuegos, fetchJuegos } = useJuegos();
     const [categorias, setCategorias] = useState([]);
     const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("");
     const [precioMin, setPrecioMin] = useState("");

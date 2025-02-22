@@ -5,7 +5,7 @@ import { useJuegos } from "@/context/JuegosContext";
 export function JuegoDestacado() {
     const { juegos, fetchJuegos } = useJuegos(); 
     const [juego, setJuego] = useState(null);
-    const [backgroundColor, setBackgroundColor] = useState("#111827");
+    const [backgroundColor] = useState("#111827");
 
     useEffect(() => {
         if (juegos.length > 0) {
