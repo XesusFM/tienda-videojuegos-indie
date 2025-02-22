@@ -7,7 +7,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
     const { agregarUsuario, editarUsuario } = useUsuarios();
     const [nombreUsuario, setNombreUsuario] = useState("");
     const [email, setEmail] = useState("");
-    const [contraseña, setContraseña] = useState("");
+    const [password, setContraseña] = useState("");
     const [rol, setRol] = useState("usuario");
 
     useEffect(() => {
@@ -26,8 +26,8 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
         return regex.test(correo);
     };
 
-    const validarContraseña = (contraseña) => {
-        return /^(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña);
+    const validarContraseña = (password) => {
+        return /^(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
     };
 
     const limpiarFormulario = () => {
@@ -46,7 +46,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
             return;
         }
 
-        if (!usuarioSeleccionado && !validarContraseña(contraseña)) {
+        if (!usuarioSeleccionado && !validarContraseña(password)) {
             Swal.fire("Error", "La contraseña debe tener al menos 8 caracteres, una mayúscula y un número.", "error");
             return;
         }
@@ -54,7 +54,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
         const usuario = {
             nombre: nombreUsuario,
             email,
-            contraseña: contraseña || usuarioSeleccionado?.contraseña, // Mantener la contraseña anterior si no la cambian
+            password: password || usuarioSeleccionado?.password, // Mantener la contraseña anterior si no la cambian
             rol
         };
 
@@ -86,7 +86,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required
                 className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
-            <input type="password" placeholder="Nueva contraseña (opcional)" value={contraseña} onChange={(e) => setContraseña(e.target.value)}
+            <input type="password" placeholder="Nueva contraseña (opcional)" value={password} onChange={(e) => setContraseña(e.target.value)}
                 className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
             <select value={rol} onChange={(e) => setRol(e.target.value)} className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500">

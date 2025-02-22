@@ -19,7 +19,7 @@ export default function Login() {
         if (resultado) {
             router.push("/");
         } else {
-            console.error("Inicio de sesión fallido");
+            console.log("Inicio de sesión fallido");
         }
     };
 

@@ -3,9 +3,23 @@
     {
       "nombre": "admin ",
       "email": "admin@gmail.com",
-      "contraseña": "Renaido123",
+      "password": "Renaido123",
       "rol": "admin",
       "id": "d6c7"
+    },
+    {
+      "nombre": "maria",
+      "email": "maria@gmail.com",
+      "password": "caca123",
+      "rol": "usuario",
+      "id": "1373"
+    },
+    {
+      "id": "f150",
+      "nombre_usuario": "asdfad",
+      "email": "adf@gmail.com",
+      "password": "Renaido123",
+      "rol": "usuario"
     }
   ],
   "juegos": [

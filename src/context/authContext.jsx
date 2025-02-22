@@ -1,5 +1,6 @@
 "use client";
 import { createContext, useState, useEffect, useContext } from "react";
+import Swal from "sweetalert2";
 
 const ContextoAutenticacion = createContext(null);
 
@@ -18,6 +19,13 @@ export const ProveedorAutenticacion = ({ children }) => {
             const res = await fetch("http://localhost:5000/usuarios");
             const usuarios = await res.json();
 
+            console.log("Usuarios obtenidos:", usuarios);
+            console.log("Email ingresado:", email);
+            console.log("Password ingresado:", password);
+
+            
+            console.log(email, password);
+
             const usuarioEncontrado = usuarios.find(
                 (u) => u.email === email && u.password === password
             );
@@ -27,11 +35,19 @@ export const ProveedorAutenticacion = ({ children }) => {
                 localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
                 return usuarioEncontrado; 
             } else {
-                console.error("Usuario o contraseña incorrectos.");
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: "Usuario o contraseña incorrectos",
+                });
                 return null;
             }
         } catch (error) {
-            console.error("Error al autenticar usuario:", error);
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "Ocurrió un error al iniciar sesión",
+            });
             return null;
         }
     };

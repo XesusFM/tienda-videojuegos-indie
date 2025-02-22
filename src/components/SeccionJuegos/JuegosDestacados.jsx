@@ -1,22 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
-import { getJuegos } from "@/services/api";
+import { JuegosProvider, useJuegos } from "@/context/JuegosContext"; 
 import { TarjetaJuego } from "@/components/Juegos/TarjetaJuego";
 
 export function SeccionJuegos() {
-    const [juegos, setJuegos] = useState([]);
 
-    useEffect(() => {
-        async function cargarJuegos() {
-            try {
-                const data = await getJuegos();
-                setJuegos(data);
-            } catch (error) {
-                console.error("Error cargando juegos:", error);
-            }
-        }
-        cargarJuegos();
-    }, []);
+    const { juegos } = useJuegos();
 
     return (
         <section className="max-w-6xl mx-auto px-4">

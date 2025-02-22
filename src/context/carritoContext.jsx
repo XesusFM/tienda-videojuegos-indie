@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 const CarritoContext = createContext();
 
 export function CarritoProvider({ children }) {
+    
     const [carrito, setCarrito] = useState([]);
 
     useEffect(() => {
