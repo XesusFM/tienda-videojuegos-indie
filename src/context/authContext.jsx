@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/router";
 import { createContext, useState, useEffect, useContext } from "react";
 import Swal from "sweetalert2";
 
@@ -56,6 +57,7 @@ export const ProveedorAutenticacion = ({ children }) => {
     const cerrarSesion = () => {
         setUsuario(null);
         localStorage.removeItem("usuario");
+        router.push("/"); 
     };
 
     return (
