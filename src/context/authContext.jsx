@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; 
 import { createContext, useState, useEffect, useContext } from "react";
 import Swal from "sweetalert2";
 
@@ -7,6 +7,7 @@ const ContextoAutenticacion = createContext(null);
 
 export const ProveedorAutenticacion = ({ children }) => {
     const [usuario, setUsuario] = useState(null);
+    const router = useRouter();
 
     useEffect(() => {
         const usuarioGuardado = localStorage.getItem("usuario");

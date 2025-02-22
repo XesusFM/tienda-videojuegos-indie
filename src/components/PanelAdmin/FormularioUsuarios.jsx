@@ -7,14 +7,14 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
     const { agregarUsuario, editarUsuario } = useUsuarios();
     const [nombreUsuario, setNombreUsuario] = useState("");
     const [email, setEmail] = useState("");
-    const [password, setContraseña] = useState("");
+    const [password, setContrasena] = useState("");
     const [rol, setRol] = useState("usuario");
 
     useEffect(() => {
         if (usuarioSeleccionado) {
             setNombreUsuario(usuarioSeleccionado.nombre || "");
             setEmail(usuarioSeleccionado.email || "");
-            setContraseña(""); // No mostrar la contraseña anterior por seguridad
+            setContrasena(""); // No mostrar la contraseña anterior por seguridad
             setRol(usuarioSeleccionado.rol || "usuario");
         } else {
             limpiarFormulario();
@@ -33,7 +33,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
     const limpiarFormulario = () => {
         setNombreUsuario("");
         setEmail("");
-        setContraseña("");
+        setContrasena("");
         setRol("usuario");
         setUsuarioSeleccionado(null);
     };
@@ -86,7 +86,7 @@ export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSele
             <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required
                 className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
-            <input type="password" placeholder="Nueva contraseña (opcional)" value={password} onChange={(e) => setContraseña(e.target.value)}
+            <input type="password" placeholder="Nueva contraseña (opcional)" value={password} onChange={(e) => setContrasena(e.target.value)}
                 className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500"/>
 
             <select value={rol} onChange={(e) => setRol(e.target.value)} className="w-full p-3 mb-4 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-pink-500">
