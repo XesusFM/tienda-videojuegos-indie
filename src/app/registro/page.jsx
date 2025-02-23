@@ -15,8 +15,8 @@ export default function Registro() {
         return regex.test(correo);
     };
 
-    const validarContraseña = (contraseña) => {
-        return /^(?=.*[A-Z])(?=.*\d).{8,}$/.test(contraseña);
+    const validarContraseña = (password) => {
+        return /^(?=.*[A-Z])(?=.*\d).{8,}$/.test(password);
     };
 
     const handleRegistro = async (e) => {
@@ -44,7 +44,7 @@ export default function Registro() {
             const nuevoUsuario = {
                 nombre_usuario: nombre,
                 email: email,
-                contraseña: password, 
+                password: password, 
                 rol: "usuario"
             };
 

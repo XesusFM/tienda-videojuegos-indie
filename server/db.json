@@ -20,6 +20,20 @@
       "email": "adf@gmail.com",
       "password": "Renaido123",
       "rol": "usuario"
+    },
+    {
+      "id": "de2e",
+      "nombre_usuario": "melisa ",
+      "email": "mbouzaa@gmail.com",
+      "password": "Melisabouza23",
+      "rol": "usuario"
+    },
+    {
+      "id": "b361",
+      "nombre_usuario": "melisa",
+      "email": "mbouza@gmail.com",
+      "password": "Melisabouza23",
+      "rol": "usuario"
     }
   ],
   "juegos": [
