@@ -42,7 +42,7 @@ export default function Registro() {
             }
 
             const nuevoUsuario = {
-                nombre_usuario: nombre,
+                nombre: nombre,
                 email: email,
                 password: password, 
                 rol: "usuario"
