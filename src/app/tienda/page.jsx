@@ -1,6 +1,6 @@
 import { JuegosTienda } from "@/components/SeccionJuegos/JuegosTienda";
 import { Filtros } from "@/components/Filtros/Filtros";
-import { JuegosProvider } from "@/context/JuegosContext";
+import { JuegosProvider } from "@/context/juegosContext";
 
 export default function Tienda() {
     return (

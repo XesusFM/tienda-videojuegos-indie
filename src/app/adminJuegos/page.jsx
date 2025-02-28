@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { JuegosProvider } from "@/context/JuegosContext";
+import { JuegosProvider } from "@/context/juegosContext";
 import FormularioJuego from "../../components/PanelAdmin/FormularioJuego";
 import TablaJuegos from "../../components/PanelAdmin/TablaJuegos";
 

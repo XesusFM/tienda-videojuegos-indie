@@ -1,6 +1,6 @@
 "use client";
-import ResumenCarrito from "@/components/Pago/ResumenCarrito";
-import { ResumenCompra } from "@/components/Pago/ResumenCompra";
+import ResumenCarrito from "@/components/Pago/resumenCarrito";
+import { ResumenCompra } from "@/components/Pago/resumenCompra";
 
 export default function Carrito() {
     return (

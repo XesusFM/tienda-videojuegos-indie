@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useJuegos } from "@/context/JuegosContext";
+import { useJuegos } from "@/context/juegosContext";
 
 export function Filtros() {
     const { setJuegos, fetchJuegos } = useJuegos();

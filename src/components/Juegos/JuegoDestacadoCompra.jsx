@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useJuegos } from "@/context/JuegosContext"; 
+import { useJuegos } from "@/context/juegosContext"; 
 
 export function JuegoDestacadoCompra({ id }) {
     const { getJuegoById } = useJuegos(); 

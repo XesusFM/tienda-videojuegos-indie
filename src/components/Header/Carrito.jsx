@@ -1,5 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa";
-import { useCarrito } from "@/context/CarritoContext";
+import { useCarrito } from "@/context/carritoContext";
 import Link from "next/link";
 
 const Carrito = () => {

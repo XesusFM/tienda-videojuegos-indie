@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useCarrito } from "@/context/CarritoContext";
-import { useJuegos } from "@/context/JuegosContext";
+import { useCarrito } from "@/context/carritoContext";
+import { useJuegos } from "@/context/juegosContext";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import { JuegoDestacadoCompra } from "@/components/Juegos/JuegoDestacadoCompra";

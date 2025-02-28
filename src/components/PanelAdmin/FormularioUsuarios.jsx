@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useUsuarios } from "@/context/UsuariosContext";
+import { useUsuarios } from "@/context/usuariosContext";
 import Swal from "sweetalert2";
 
 export default function FormularioUsuarios({ usuarioSeleccionado, setUsuarioSeleccionado }) {

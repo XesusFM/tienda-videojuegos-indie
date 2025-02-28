@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useJuegos } from "@/context/JuegosContext";
+import { useJuegos } from "@/context/juegosContext";
 import Swal from "sweetalert2";
 
 export default function TablaJuegos({ onSeleccionarJuego }) {
